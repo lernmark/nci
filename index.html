@@ -9,7 +9,6 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
         .serif-italic { font-family: 'Playfair Display', serif; font-style: italic; }
-        .link-underline { border-bottom: 2px solid black; display: inline-block; padding-bottom: 2px; }
         .nav-shadow { text-shadow: 0px 2px 4px rgba(0,0,0,0.5); }
         #mobile-menu { transition: transform 0.3s ease-in-out; }
         
@@ -36,7 +35,7 @@
 
     <nav class="absolute top-0 w-full z-50">
         <div class="max-w-7xl mx-auto px-8 md:px-24 h-24 md:h-48 flex justify-between items-center relative">
-            <div class="flex items-center brightness-0 invert nav-shadow">
+            <div class="flex items-center nav-shadow">
                 <div class="h-16 md:h-32 flex items-center">
                     <img src="images/frombelieftobankability_logo.png" alt="Logo" class="h-full w-auto">
                 </div>
@@ -71,112 +70,251 @@
         </svg>
     </div>
 
-    <section id="home" class="flex flex-col min-h-screen">
-        <div class="bg-[#0033FF] text-white px-8 md:px-24 flex-1 flex flex-col justify-center pt-48 pb-16">
-            <h1 class="text-4xl md:text-7xl font-bold leading-tight mb-6">Circularity is no <br> longer an ambition.</h1>
+    <section id="home" class="grid grid-cols-1 md:grid-cols-2">
+        <div class="bg-[#0033FF] text-white px-8 md:px-24 flex flex-col justify-center pt-48 pb-16">
+            <h1 class="text-4xl md:text-5xl leading-tight mb-6">Circularity is no <br> longer an ambition.</h1>
             <p class="text-2xl md:text-4xl serif-italic text-blue-200">It's an investment strategy.</p>
         </div>
-        <div class="relative min-h-[500px] flex items-center justify-center p-8 text-center text-white">
+
+        <div class="relative flex items-center justify-center p-8 pt-48 md:pt-48 text-white min-h-[500px] md:min-h-0">
             <img src="images/DTS_NORDIC_by Gregory Woodman_004.webp" alt="Forest" class="absolute inset-0 w-full h-full object-cover">
             <div class="absolute inset-0 bg-black/40"></div>
+            
             <div class="relative z-10 space-y-8 nav-shadow">
-                <h2 class="text-lg md:text-2xl font-bold tracking-[0.2em] uppercase max-w-sm mx-auto">A Nordic initiative accelerating investments in circular business.</h2>
-                <p class="text-base md:text-xl leading-relaxed opacity-95 font-light max-w-sm mx-auto">In October 2026, unveiling ten most successful business cases with proven returns, scalable models, and measurable impact.</p>
-            </div>
-        </div>
-        <div class="bg-white text-black py-12 px-8 text-center border-b">
-            <div class="max-w-xs md:max-w-2xl mx-auto text-sm md:text-lg font-bold uppercase tracking-widest leading-relaxed">
-                10 companies across the Nordics demonstrating <span class="link-underline">how circular business models become bankable.</span>
-            </div>
-        </div>
-    </section>
-
-    <section id="cases" class="flex flex-col bg-white">
-        <div class="relative min-h-[400px] flex items-center justify-center p-8 text-white text-center">
-            <img src="images/DTS_NORDIC_by Gregory Woodman_008.webp" alt="Process" class="absolute inset-0 w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black/50"></div>
-            <div class="relative z-10 nav-shadow">
-                <h2 class="text-3xl font-bold mb-4">Circular business.</h2>
-                <p class="text-2xl serif-italic italic opacity-80">Proven performance.</p>
-            </div>
-        </div>
-        <div class="max-w-7xl mx-auto w-full px-8 md:px-24">
-            <div class="border-b flex justify-between items-center py-8 group hover:bg-[#0033FF] hover:text-white transition cursor-pointer">
-                <div>
-                    <p class="text-xs uppercase font-bold text-blue-600 group-hover:text-white">#01 CIRCULAR HOOPS INC</p>
-                    <p class="text-lg italic serif-italic">Textile fiber regeneration</p>
-                </div>
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-            </div>
-            <div class="border-b flex justify-between items-center py-8 text-gray-400">
-                <div>
-                    <p class="text-xs uppercase font-bold">#02 SOTENÄS SYMBIOS</p>
-                    <p class="text-lg italic serif-italic">UNVEILING 26 OCTOBER</p>
-                </div>
-                <svg class="w-8 h-8 opacity-20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+                <h2 class="text-lg md:text-2xl font-bold tracking-[0.2em] uppercase max-w-sm mx-auto">
+                    A Nordic initiative accelerating investments in circular business.
+                </h2>
+                <p class="text-base md:text-xl leading-relaxed opacity-95 font-light max-w-sm mx-auto">
+                    In October 2026, unveiling ten most successful business cases with proven returns, scalable models, and measurable impact.
+                </p>
             </div>
         </div>
     </section>
 
-    <section id="about" class="flex flex-col bg-white border-t border-gray-100">
-        <div class="relative h-[300px] md:h-[500px]">
-            <img src="images/DTS_NORDIC_by Gregory Woodman_001.webp" alt="Mountains" class="w-full h-full object-cover">
+    <div class="bg-white text-black py-16 px-8 text-center">
+        <h2 class="text-xl md:text-3xl font-bold max-w-3xl mx-auto">
+            <a href="#signup" class="underline">Get early access</a> and discover how 10 companies are making circularity bankable.
+        </h2>
+    </div>
+
+    <section id="cases" class="max-w-7xl mx-auto px-8 md:px-24 pb-24">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="relative aspect-square bg-gray-100 overflow-hidden flex flex-col items-center justify-center border border-gray-200 group">
+                <img src="images/DTS_NORDIC_by Gregory Woodman_002.webp" class="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-20 transition" alt="">
+                <div class="relative z-10 text-center">
+                    <p class="text-[10px] uppercase font-bold text-gray-400 mb-2">Case #01</p>
+                    <p class="text-sm font-bold text-[#0033FF]">UNVEILING 26 OCTOBER</p>
+                </div>
+            </div>
+            <div class="relative aspect-square bg-gray-100 overflow-hidden flex flex-col items-center justify-center border border-gray-200 group">
+                <img src="images/DTS_NORDIC_by Gregory Woodman_003.webp" class="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-20 transition" alt="">
+                <div class="relative z-10 text-center">
+                    <p class="text-[10px] uppercase font-bold text-gray-400 mb-2">Case #02</p>
+                    <p class="text-sm font-bold text-[#0033FF]">UNVEILING 26 OCTOBER</p>
+                </div>
+            </div>
+            <div class="relative aspect-square bg-gray-100 overflow-hidden flex flex-col items-center justify-center border border-gray-200 group">
+                <img src="images/DTS_NORDIC_by Gregory Woodman_008.webp" class="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-20 transition" alt="">
+                <div class="relative z-10 text-center">
+                    <p class="text-[10px] uppercase font-bold text-gray-400 mb-2">Case #03</p>
+                    <p class="text-sm font-bold text-[#0033FF]">UNVEILING 26 OCTOBER</p>
+                </div>
+            </div>
+            <div class="relative aspect-square bg-gray-100 overflow-hidden flex flex-col items-center justify-center border border-gray-200 group">
+                <img src="images/DTS_NORDIC_by Gregory Woodman_010.webp" class="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-20 transition" alt="">
+                <div class="relative z-10 text-center">
+                    <p class="text-[10px] uppercase font-bold text-gray-400 mb-2">Case #04</p>
+                    <p class="text-sm font-bold text-[#0033FF]">UNVEILING 26 OCTOBER</p>
+                </div>
+            </div>
         </div>
-        <div class="p-8 md:p-24 space-y-12 max-w-7xl mx-auto">
-            <p class="text-xl md:text-3xl leading-relaxed text-gray-800 italic serif-italic">Nordic Circular Investments is a project initiated by Nordic Innovation with the aim to accelerate circular economy investments across the Nordics.</p>
-            <div class="bg-[#0033FF] text-white p-8 rounded-sm text-center">
-                <p class="font-bold uppercase tracking-widest text-sm md:text-base">This project is led by Fundforward in collaboration with Mixi and Circular Norway.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 pt-8">
-                <div class="space-y-4">
-                    <h3 class="font-bold border-b pb-2 uppercase tracking-widest text-sm text-[#0033FF]">Fundforward</h3>
-                    <p class="text-sm text-gray-600">Investor and ecosystem integrator combining hands-on experience with strategic building.</p>
-                </div>
-                <div class="space-y-4">
-                    <h3 class="font-bold border-b pb-2 uppercase tracking-widest text-sm text-[#0033FF]">Mixi</h3>
-                    <p class="text-sm text-gray-600">Ecosystem catalyst based in Helsinki, empowering entrepreneurship for the circular transition.</p>
-                </div>
-                <div class="space-y-4">
-                    <h3 class="font-bold border-b pb-2 uppercase tracking-widest text-sm text-[#0033FF]">Circular Norway</h3>
-                    <p class="text-sm text-gray-600">Impact organisation driving circular adoption across industries with data-driven analysis.</p>
-                </div>
-            </div>
+        <div class="mt-12 text-center">
+            <button class="bg-[#0033FF] text-white px-8 py-3 rounded-full font-bold uppercase tracking-widest text-xs">Browse Cases</button>
         </div>
     </section>
 
-    <section id="meet-us" class="py-24 px-8 bg-gray-50 border-t border-gray-100">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center px-4 md:px-24">
-            <div class="h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-xl">
-                <img src="images/DTS_NORDIC_by Gregory Woodman_007.webp" class="w-full h-full object-cover" alt="Meet us">
+    <!-- <section class="grid grid-cols-1 md:grid-cols-2 min-h-[600px]">
+        <div class="relative">
+            <img src="images/DTS_NORDIC_by Gregory Woodman_006.webp" class="absolute inset-0 w-full h-full object-cover" alt="">
+            <div class="absolute inset-0 flex flex-col justify-end p-12 text-white">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Get the insights</h2>
+                <p class="text-2xl md:text-3xl serif-italic italic opacity-90">behind the cases</p>
             </div>
-            <div>
-                <h2 class="text-4xl font-bold mb-6 serif-italic italic text-[#0033FF]">Meet us</h2>
-                <p class="text-lg text-gray-600 mb-8 leading-relaxed">From now until October, when all cases are showcased, you'll see us popping up in many different places.</p>
-                <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm">
-                    <div class="flex justify-between items-center">
-                        <span class="text-2xl font-bold">25 OKT</span>
-                        <span class="text-[#0033FF] font-bold uppercase tracking-widest">Stockholm</span>
+        </div>
+        <div class="bg-[#0033FF] text-white p-12 md:p-24 flex flex-col justify-center items-start">
+            <p class="text-lg md:text-xl leading-relaxed mb-12">Sign-up to receive the cases as they are released – including interviews, analysis and learnings from the companies and investors.</p>
+            <a href="#signup" class="bg-white text-[#0033FF] px-8 py-4 rounded-full font-bold uppercase tracking-widest text-xs">Sign up for early access</a>
+        </div>
+    </section> -->
+
+    <section id="about" class="bg-white">
+        <div class="relative h-[400px] md:h-[600px] flex flex-col items-center justify-center text-white text-center px-6">
+            <img src="images/DTS_NORDIC_by Gregory Woodman_001.webp" class="absolute inset-0 w-full h-full object-cover" alt="About initiative">
+            <div class="absolute inset-0 bg-black/30"></div>
+            <div class="relative z-10 max-w-5xl">
+                <h2 class="text-3xl md:text-5xl font-bold leading-tight nav-shadow">
+                    Nordic Circular Investments is a project initiated by Nordic Innovation with <span class="serif-italic italic font-normal">the aim to accelerate circular economy investments across the Nordics.</span>
+                </h2>
+            </div>
+        </div>
+
+        <div class="max-w-4xl mx-auto py-16 px-8 text-center">
+            <p class="text-[#0033FF] text-xl md:text-2xl font-bold">
+                This project is led by Fundforward in collaboration with Mixi and Circular Norway.
+            </p>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-8 md:px-24 pb-24 grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
+            <div class="space-y-16">
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-bold">Fundforward</h3>
+                    <p class="text-gray-600 leading-relaxed font-mono text-sm">
+                        is a perspective-leading investor and ecosystem integrator in the circular economy space, combining hands-on investment experience with strategic ecosystem building. Fundforward backs entrepreneurs developing circular raw material loops and critical infrastructure solutions that enable system-level transformation.
+                    </p>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-bold">Circular Norway</h3>
+                    <p class="text-gray-600 leading-relaxed font-mono text-sm">
+                        Circular Norway is a leading impact organisation driving circular economy adoption across industries, with expertise in data-driven analysis, value chain mapping, and risk modelling. CN has a strong track record of collaborating with the financial sector – including banks, pension funds, and insurers – to integrate circular opportunities and risks into investment strategies.
+                    </p>
+                </div>
+            </div>
+
+            <div class="space-y-16">
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-bold">Mixi</h3>
+                    <p class="text-gray-600 leading-relaxed font-mono text-sm">
+                        MIXI is a dynamic ecosystem catalyst based in Helsinki, accelerating the transition to a circular economy by empowering entrepreneurship through tailored programs, curated events, and multi-sector collaboration.
+                    </p>
+                    <a href="#about" class="inline-block text-sm font-bold border-b-2 border-black pb-1 hover:text-[#0033FF] hover:border-[#0033FF] transition">
+                        Read more about the project Nordic Circular Investments >>
+                    </a>
+                </div>
+
+                <div class="bg-gray-100 p-10 md:p-16 relative min-h-[300px] flex flex-col justify-between">
+                    <div class="flex justify-between items-start">
+                        <div class="text-[#0033FF]">
+                            <h3 class="text-3xl font-bold">Sign up for</h3>
+                            <p class="text-2xl serif-italic italic">early access</p>
+                        </div>
+                        <svg class="w-16 h-16 text-[#0033FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"/>
+                        </svg>
+                    </div>
+                    <div class="border-t border-black pt-6">
+                        <p class="text-xs font-mono text-gray-600">Access curated circular investment opportunities.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <section id="signup" class="flex flex-col min-h-screen">
-        <div class="relative h-[400px] md:h-[600px] flex items-center justify-center p-8 text-center text-white">
-            <img src="images/DTS_NORDIC_by Gregory Woodman_0013.webp" alt="Team" class="absolute inset-0 w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black/40"></div>
-            <h2 class="relative z-10 text-3xl md:text-6xl font-bold italic serif-italic nav-shadow">Discover how to turn circularity <br> into real business success</h2>
+    <section id="meet-us" class="bg-white md:mb-24">
+        <div class="relative h-[400px] md:h-[600px] flex flex-col items-center justify-center text-white text-center px-4">
+            <img src="images/DTS_NORDIC_by Gregory Woodman_007.webp" class="absolute inset-0 w-full h-full object-cover"
+                alt="Meet us">
+            <div class="absolute inset-0 bg-black/30"></div>
+            <h2 class="relative z-10 text-5xl md:text-7xl font-bold nav-shadow">Meet us</h2>
         </div>
-        <div class="bg-[#0033FF] text-white p-12 md:p-32 flex-1 flex flex-col justify-center items-center text-center">
-            <p class="text-base md:text-xl mb-12 opacity-90 max-w-xl">In October 2026, we'll open up the playbook behind the shift from linear to circular, highlighting the KPIs that matter.</p>
-            <h3 class="text-4xl md:text-7xl font-bold mb-12 italic serif-italic leading-tight">Sign up. <br> <span class="text-2xl md:text-4xl opacity-80 font-normal">It's free - and it's the only way in.</span></h3>
-            <a href="#" class="border-2 border-white px-12 py-5 rounded-full font-bold uppercase tracking-widest hover:bg-white hover:text-[#0033FF] transition-all text-lg shadow-2xl">Get Access</a>
+    
+        <div class="max-w-4xl mx-auto py-16 px-8 text-center space-y-6">
+            <p class="text-[#0033FF] text-xl md:text-2xl font-bold leading-relaxed">
+                From now until October, when all cases are showcased, you'll see us popping up in many different places.
+                We'll be sharing insights, interviewing founders of successful circular businesses, and much more along the
+                way.
+            </p>
+            <p class="text-[#0033FF] text-lg font-bold">See below for where you can meet us!</p>
         </div>
-    </section>
+    
+        <div class="grid grid-cols-1 md:grid-cols-2">
+            <div class="relative h-[400px] md:h-auto flex flex-col justify-center items-center text-white order-1 md:order-2 md:mb-1">
+                <img src="images/DTS_NORDIC_by Gregory Woodman_001.webp" class="absolute inset-0 w-full h-full object-cover"
+                    alt="Stockholm Event">
+                <div class="absolute inset-0 bg-black/20"></div>
+                <div class="relative z-10 text-center nav-shadow">
+                    <p class="text-4xl md:text-5xl font-bold mb-2">25 okt</p>
+                    <p class="text-3xl md:text-4xl serif-italic italic">Stockholm</p>
+                </div>
+            </div>            
+            <div class="bg-gray-200 p-12 md:p-24 flex flex-col justify-center items-center text-center space-y-8 order-2 md:order-1 md:mb-1">
+                <p class="text-gray-600 font-mono">Text about event</p>
+                <a href="#signup"
+                    class="bg-white text-[#0033FF] px-10 py-2 rounded-full text-xs font-bold uppercase tracking-widest shadow-sm">Sign
+                    Up</a>
+            </div>
 
-    <footer class="bg-[#0033FF] text-white py-16 px-8">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center border-t border-white/20 pt-10 px-8 md:px-24">
+    
+            <div
+                class="relative h-[400px] md:h-auto flex flex-col justify-center items-center text-white order-3 md:order-4 md:mb-1">
+                <img src="images/DTS_NORDIC_by Gregory Woodman_001.webp" class="absolute inset-0 w-full h-full object-cover"
+                    alt="Stockholm Event">
+                <div class="absolute inset-0 bg-black/20"></div>
+                <div class="relative z-10 text-center nav-shadow">
+                    <p class="text-4xl md:text-5xl font-bold mb-2">25 nov</p>
+                    <p class="text-3xl md:text-4xl serif-italic italic">Stockholm</p>
+                </div>
+            </div>
+            <div
+                class="bg-gray-200 p-12 md:p-24 flex flex-col justify-center items-center text-center space-y-8 order-4 md:order-3 md:mb-1">
+                <p class="text-gray-600 font-mono">Text about event</p>
+                <a href="#signup"
+                    class="bg-white text-[#0033FF] px-10 py-2 rounded-full text-xs font-bold uppercase tracking-widest shadow-sm">Sign
+                    Up</a>
+            </div>
+        </div>
+</section>
+
+<section id="signup" class="flex flex-col">
+    <div class="relative h-[400px] md:h-[600px] flex flex-col items-center justify-center text-white text-center px-6">
+        <img src="images/DTS_NORDIC_by Gregory Woodman_0013.webp" class="absolute inset-0 w-full h-full object-cover" alt="Team Insights">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="relative z-10 max-w-4xl">
+            <h2 class="text-4xl md:text-6xl font-bold leading-tight nav-shadow">
+                Discover how to turn circularity <br>
+                <span class="serif-italic italic font-normal">into real business success</span>
+            </h2>
+        </div>
+    </div>
+
+    <div class="bg-[#0033FF] text-white py-16 px-8 md:px-24 text-center">
+        <div class="max-w-4xl mx-auto">
+            <p class="text-xl md:text-2xl font-bold leading-relaxed">
+                In October 2026, we’ll open up the playbook (10 most successful Nordic circular business cases) behind the shift from linear to circular – highlighting the KPIs that matter, the business models driving profitability, and the structural conditions that enable systemic change.
+            </p>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 min-h-[500px]">
+        <div class="bg-white p-12 md:p-24 flex flex-col justify-center items-start md:items-end text-left md:text-right">
+            <div class="max-w-md">
+                <h3 class="text-[#0033FF] text-5xl md:text-6xl font-bold mb-4">Sign up.</h3>
+                <p class="text-[#0033FF] text-3xl md:text-4xl serif-italic italic leading-tight">
+                    It’s free - and it’s the only way in.
+                </p>
+            </div>
+        </div>
+
+        <div class="bg-[#E5E5E5] p-12 md:p-24 flex flex-col justify-center items-start">
+            <form name="signup" method="POST" data-netlify="true" class="w-full max-w-md space-y-4">
+                <input type="text" name="name" placeholder="ENTER YOUR NAME" required 
+                    class="w-full p-4 bg-white border-none text-xs tracking-widest font-mono focus:ring-2 focus:ring-[#0033FF] outline-none">
+                
+                <input type="text" name="business" placeholder="ENTER YOUR BUSINESS" required 
+                    class="w-full p-4 bg-white border-none text-xs tracking-widest font-mono focus:ring-2 focus:ring-[#0033FF] outline-none">
+                
+                <input type="email" name="email" placeholder="EMAIL ADRESS" required 
+                    class="w-full p-4 bg-white border-none text-xs tracking-widest font-mono focus:ring-2 focus:ring-[#0033FF] outline-none">
+                
+                <button type="submit" 
+                    class="bg-[#0033FF] text-white px-12 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-blue-700 transition shadow-lg">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+    <footer class="bg-[#0033FF] text-white py-16 px-8 md:px-24">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center border-t border-white/20 pt-10">
             <div class="h-12 md:h-16 mb-8 md:mb-0 brightness-0 invert">
                 <img src="images/frombelieftobankability_logo.png" alt="Logo" class="h-full w-auto">
             </div>
