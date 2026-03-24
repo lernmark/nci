@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html lang="sv" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nordic Circular Investments | From Belief to Bankability</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:italic,wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Libre+Baskerville:ital,wght@1,400&display=swap"
+        rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        .serif-italic { font-family: 'Playfair Display', serif; font-style: italic; }
-        .nav-shadow { text-shadow: 0px 2px 4px rgba(0,0,0,0.5); }
-        #mobile-menu { transition: transform 0.3s ease-in-out; }
-        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .serif-italic {
+            font-family: 'Libre Baskerville', serif;
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .nav-shadow {
+            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+        }
+
         @media (min-width: 768px) {
             .diagonal-pil {
                 position: fixed;
@@ -20,7 +36,7 @@
                 z-index: 60;
             }
         }
-        
+
         @media (max-width: 767px) {
             .diagonal-pil {
                 position: absolute;
@@ -31,61 +47,80 @@
         }
     </style>
 </head>
+
 <body class="bg-white text-gray-900 overflow-x-hidden">
 
-    <nav class="absolute top-0 w-full z-50">
-        <div class="max-w-7xl mx-auto px-8 md:px-24 h-24 md:h-48 flex justify-between items-center relative">
-            <div class="flex items-center nav-shadow">
-                <div class="h-16 md:h-32 flex items-center">
-                    <img src="images/frombelieftobankability_logo.png" alt="Logo" class="h-full w-auto">
-                </div>
-            </div>
-            <div class="hidden md:flex space-x-12 text-[12px] font-bold uppercase tracking-[0.2em] items-center text-white nav-shadow">
-                <a href="#about" class="hover:opacity-70 transition">About us</a>
-                <a href="#signup" class="hover:opacity-70 transition">Sign up</a>
-                <a href="#meet-us" class="hover:opacity-70 transition">Meet us</a>
-            </div>
-            <button onclick="toggleMenu()" class="md:hidden text-white p-2 nav-shadow">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
-            </button>
+<nav class="absolute top-0 w-full z-50">
+    <div class="flex md:hidden bg-white h-20 px-6 items-center justify-between">
+        <div class="w-12 text-[#0033FF]">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.5 5.5L4.5 20.5" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M10 5.5H19.5V15" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
         </div>
 
-        <div id="mobile-menu" class="fixed inset-0 bg-[#0033FF] z-50 transform translate-x-full md:hidden flex flex-col items-center justify-center space-y-8 text-white text-xl font-bold uppercase tracking-widest">
-            <button onclick="toggleMenu()" class="absolute top-8 right-8 text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </button>
-            <a href="#about" onclick="toggleMenu()">About us</a>
-            <a href="#signup" onclick="toggleMenu()">Sign up</a>
-            <a href="#meet-us" onclick="toggleMenu()">Meet us</a>
+        <div class="flex-grow flex justify-center px-4">
+            <img src="images/frombelieftobankability_logo.png" alt="Logo" class="h-16 w-auto object-contain">
         </div>
-    </nav>
+
+        <button onclick="toggleMenu()" class="w-12 flex justify-end text-[#0033FF]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+              <line x1="4" y1="8" x2="20" y2="8" />
+              <line x1="4" y1="16" x2="16" y2="16" />
+            </svg>
+        </button>
+    </div>
+
+    <div class="hidden md:flex max-w-7xl mx-auto px-24 h-40 justify-between items-center relative">
+        <div class="flex items-center nav-shadow">
+            <div class="h-32 flex items-center">
+                <img src="images/frombelieftobankability_logo.png" alt="Logo" class="h-full w-auto">
+            </div>
+        </div>
+        
+        <div class="flex space-x-12 text-[12px] font-bold uppercase tracking-[0.2em] items-center text-white nav-shadow">
+            <a href="#about" class="hover:opacity-70 transition">About us</a>
+            <a href="#signup" class="hover:opacity-70 transition">Sign up</a>
+            <a href="#meet-us" class="hover:opacity-70 transition">Meet us</a>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-[#0033FF] z-50 transform translate-x-full md:hidden flex flex-col items-center justify-center space-y-8 text-white text-xl font-bold uppercase tracking-widest transition-transform duration-300">
+        <button onclick="toggleMenu()" class="absolute top-8 right-8 text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <a href="#about" onclick="toggleMenu()">About us</a>
+        <a href="#signup" onclick="toggleMenu()">Sign up</a>
+        <a href="#meet-us" onclick="toggleMenu()">Meet us</a>
+    </div>
+</nav>
 
     <div class="diagonal-pil text-white brightness-0 invert nav-shadow">
         <svg class="h-10 w-10 md:h-20 md:w-20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10" />
         </svg>
     </div>
 
     <section id="home" class="grid grid-cols-1 md:grid-cols-2">
-        <div class="bg-[#0033FF] text-white px-8 md:px-24 flex flex-col justify-center pt-48 pb-16">
+        <div class="bg-[#0033FF] text-white px-8 md:px-32 flex flex-col justify-center pt-48 pb-16">
             <h1 class="text-4xl md:text-5xl leading-tight mb-6">Circularity is no <br> longer an ambition.</h1>
             <p class="text-2xl md:text-4xl serif-italic text-blue-200">It's an investment strategy.</p>
         </div>
 
-        <div class="relative flex items-center justify-center p-8 pt-48 md:pt-48 text-white min-h-[500px] md:min-h-0">
-            <img src="images/DTS_NORDIC_by Gregory Woodman_004.webp" alt="Forest" class="absolute inset-0 w-full h-full object-cover">
+        <div class="relative flex items-center justify-center p-8 pt-24 md:pt-48 text-white min-h-[200px] md:min-h-0">
+            <img src="images/DTS_NORDIC_by Gregory Woodman_004.webp" alt="Forest"
+                class="absolute inset-0 w-full h-full object-cover">
             <div class="absolute inset-0 bg-black/40"></div>
-            
+
             <div class="relative z-10 space-y-8 nav-shadow">
                 <h2 class="text-lg md:text-2xl font-bold tracking-[0.2em] uppercase max-w-sm mx-auto">
                     A Nordic initiative accelerating investments in circular business.
                 </h2>
                 <p class="text-base md:text-xl leading-relaxed opacity-95 font-light max-w-sm mx-auto">
-                    In October 2026, unveiling ten most successful business cases with proven returns, scalable models, and measurable impact.
+                    In October 2026, unveiling ten most successful business cases with proven returns, scalable models,
+                    and measurable impact.
                 </p>
             </div>
         </div>
@@ -93,35 +128,48 @@
 
     <div class="bg-white text-black py-16 px-8 text-center">
         <h2 class="text-xl md:text-3xl font-bold max-w-3xl mx-auto">
-            <a href="#signup" class="underline">Get early access</a> and discover how 10 companies are making circularity bankable.
+            <a href="#signup" class="underline">Get early access</a> and discover how 10 companies are making
+            circularity bankable.
         </h2>
     </div>
 
     <section id="cases" class="max-w-7xl mx-auto px-8 md:px-24 pb-24">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div class="relative aspect-square bg-gray-100 overflow-hidden flex flex-col items-center justify-center border border-gray-200 group">
-                <img src="images/DTS_NORDIC_by Gregory Woodman_002.webp" class="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-20 transition" alt="">
+            <div
+                class="relative aspect-square bg-gray-100 overflow-hidden flex flex-col items-center justify-center border border-gray-200 group">
+                <img src="images/DTS_NORDIC_by Gregory Woodman_002.webp"
+                    class="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-20 transition"
+                    alt="">
                 <div class="relative z-10 text-center">
                     <p class="text-[10px] uppercase font-bold text-gray-400 mb-2">Case #01</p>
                     <p class="text-sm font-bold text-[#0033FF]">UNVEILING 26 OCTOBER</p>
                 </div>
             </div>
-            <div class="relative aspect-square bg-gray-100 overflow-hidden flex flex-col items-center justify-center border border-gray-200 group">
-                <img src="images/DTS_NORDIC_by Gregory Woodman_003.webp" class="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-20 transition" alt="">
+            <div
+                class="relative aspect-square bg-gray-100 overflow-hidden flex flex-col items-center justify-center border border-gray-200 group">
+                <img src="images/DTS_NORDIC_by Gregory Woodman_003.webp"
+                    class="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-20 transition"
+                    alt="">
                 <div class="relative z-10 text-center">
                     <p class="text-[10px] uppercase font-bold text-gray-400 mb-2">Case #02</p>
                     <p class="text-sm font-bold text-[#0033FF]">UNVEILING 26 OCTOBER</p>
                 </div>
             </div>
-            <div class="relative aspect-square bg-gray-100 overflow-hidden flex flex-col items-center justify-center border border-gray-200 group">
-                <img src="images/DTS_NORDIC_by Gregory Woodman_008.webp" class="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-20 transition" alt="">
+            <div
+                class="relative aspect-square bg-gray-100 overflow-hidden flex flex-col items-center justify-center border border-gray-200 group">
+                <img src="images/DTS_NORDIC_by Gregory Woodman_008.webp"
+                    class="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-20 transition"
+                    alt="">
                 <div class="relative z-10 text-center">
                     <p class="text-[10px] uppercase font-bold text-gray-400 mb-2">Case #03</p>
                     <p class="text-sm font-bold text-[#0033FF]">UNVEILING 26 OCTOBER</p>
                 </div>
             </div>
-            <div class="relative aspect-square bg-gray-100 overflow-hidden flex flex-col items-center justify-center border border-gray-200 group">
-                <img src="images/DTS_NORDIC_by Gregory Woodman_010.webp" class="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-20 transition" alt="">
+            <div
+                class="relative aspect-square bg-gray-100 overflow-hidden flex flex-col items-center justify-center border border-gray-200 group">
+                <img src="images/DTS_NORDIC_by Gregory Woodman_0010.webp"
+                    class="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-20 transition"
+                    alt="">
                 <div class="relative z-10 text-center">
                     <p class="text-[10px] uppercase font-bold text-gray-400 mb-2">Case #04</p>
                     <p class="text-sm font-bold text-[#0033FF]">UNVEILING 26 OCTOBER</p>
@@ -129,7 +177,9 @@
             </div>
         </div>
         <div class="mt-12 text-center">
-            <button class="bg-[#0033FF] text-white px-8 py-3 rounded-full font-bold uppercase tracking-widest text-xs">Browse Cases</button>
+            <button
+                class="bg-[#0033FF] text-white px-8 py-3 rounded-full font-bold uppercase tracking-widest text-xs">Browse
+                Cases</button>
         </div>
     </section>
 
@@ -148,12 +198,16 @@
     </section> -->
 
     <section id="about" class="bg-white">
-        <div class="relative h-[400px] md:h-[600px] flex flex-col items-center justify-center text-white text-center px-6">
-            <img src="images/DTS_NORDIC_by Gregory Woodman_001.webp" class="absolute inset-0 w-full h-full object-cover" alt="About initiative">
+        <div
+            class="relative h-[400px] md:h-[600px] flex flex-col items-center justify-center text-white text-center px-6">
+            <img src="images/DTS_NORDIC_by Gregory Woodman_001.webp" class="absolute inset-0 w-full h-full object-cover"
+                alt="About initiative">
             <div class="absolute inset-0 bg-black/30"></div>
             <div class="relative z-10 max-w-5xl">
                 <h2 class="text-3xl md:text-5xl font-bold leading-tight nav-shadow">
-                    Nordic Circular Investments is a project initiated by Nordic Innovation with <span class="serif-italic italic font-normal">the aim to accelerate circular economy investments across the Nordics.</span>
+                    Nordic Circular Investments is a project initiated by Nordic Innovation with <span
+                        class="serif-italic italic font-normal">the aim to accelerate circular economy investments
+                        across the Nordics.</span>
                 </h2>
             </div>
         </div>
@@ -169,13 +223,19 @@
                 <div class="space-y-4">
                     <h3 class="text-2xl font-bold">Fundforward</h3>
                     <p class="text-gray-600 leading-relaxed font-mono text-sm">
-                        is a perspective-leading investor and ecosystem integrator in the circular economy space, combining hands-on investment experience with strategic ecosystem building. Fundforward backs entrepreneurs developing circular raw material loops and critical infrastructure solutions that enable system-level transformation.
+                        is a perspective-leading investor and ecosystem integrator in the circular economy space,
+                        combining hands-on investment experience with strategic ecosystem building. Fundforward backs
+                        entrepreneurs developing circular raw material loops and critical infrastructure solutions that
+                        enable system-level transformation.
                     </p>
                 </div>
                 <div class="space-y-4">
                     <h3 class="text-2xl font-bold">Circular Norway</h3>
                     <p class="text-gray-600 leading-relaxed font-mono text-sm">
-                        Circular Norway is a leading impact organisation driving circular economy adoption across industries, with expertise in data-driven analysis, value chain mapping, and risk modelling. CN has a strong track record of collaborating with the financial sector – including banks, pension funds, and insurers – to integrate circular opportunities and risks into investment strategies.
+                        Circular Norway is a leading impact organisation driving circular economy adoption across
+                        industries, with expertise in data-driven analysis, value chain mapping, and risk modelling. CN
+                        has a strong track record of collaborating with the financial sector – including banks, pension
+                        funds, and insurers – to integrate circular opportunities and risks into investment strategies.
                     </p>
                 </div>
             </div>
@@ -184,9 +244,12 @@
                 <div class="space-y-4">
                     <h3 class="text-2xl font-bold">Mixi</h3>
                     <p class="text-gray-600 leading-relaxed font-mono text-sm">
-                        MIXI is a dynamic ecosystem catalyst based in Helsinki, accelerating the transition to a circular economy by empowering entrepreneurship through tailored programs, curated events, and multi-sector collaboration.
+                        MIXI is a dynamic ecosystem catalyst based in Helsinki, accelerating the transition to a
+                        circular economy by empowering entrepreneurship through tailored programs, curated events, and
+                        multi-sector collaboration.
                     </p>
-                    <a href="#about" class="inline-block text-sm font-bold border-b-2 border-black pb-1 hover:text-[#0033FF] hover:border-[#0033FF] transition">
+                    <a href="#about"
+                        class="inline-block text-sm font-bold border-b-2 border-black pb-1 hover:text-[#0033FF] hover:border-[#0033FF] transition">
                         Read more about the project Nordic Circular Investments >>
                     </a>
                 </div>
@@ -198,7 +261,8 @@
                             <p class="text-2xl serif-italic italic">early access</p>
                         </div>
                         <svg class="w-16 h-16 text-[#0033FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M7 17L17 7M17 7H7M17 7v10" />
                         </svg>
                     </div>
                     <div class="border-t border-black pt-6">
@@ -209,44 +273,48 @@
         </div>
     </section>
     <section id="meet-us" class="bg-white md:mb-24">
-        <div class="relative h-[400px] md:h-[600px] flex flex-col items-center justify-center text-white text-center px-4">
+        <div
+            class="relative h-[400px] md:h-[600px] flex flex-col items-center justify-center text-white text-center px-4">
             <img src="images/DTS_NORDIC_by Gregory Woodman_007.webp" class="absolute inset-0 w-full h-full object-cover"
                 alt="Meet us">
             <div class="absolute inset-0 bg-black/30"></div>
             <h2 class="relative z-10 text-5xl md:text-7xl font-bold nav-shadow">Meet us</h2>
         </div>
-    
+
         <div class="max-w-4xl mx-auto py-16 px-8 text-center space-y-6">
             <p class="text-[#0033FF] text-xl md:text-2xl font-bold leading-relaxed">
                 From now until October, when all cases are showcased, you'll see us popping up in many different places.
-                We'll be sharing insights, interviewing founders of successful circular businesses, and much more along the
+                We'll be sharing insights, interviewing founders of successful circular businesses, and much more along
+                the
                 way.
             </p>
             <p class="text-[#0033FF] text-lg font-bold">See below for where you can meet us!</p>
         </div>
-    
+
         <div class="grid grid-cols-1 md:grid-cols-2">
-            <div class="relative h-[400px] md:h-auto flex flex-col justify-center items-center text-white order-1 md:order-2 md:mb-1">
-                <img src="images/DTS_NORDIC_by Gregory Woodman_001.webp" class="absolute inset-0 w-full h-full object-cover"
-                    alt="Stockholm Event">
+            <div
+                class="relative h-[400px] md:h-auto flex flex-col justify-center items-center text-white order-1 md:order-2 md:mb-1">
+                <img src="images/DTS_NORDIC_by Gregory Woodman_001.webp"
+                    class="absolute inset-0 w-full h-full object-cover" alt="Stockholm Event">
                 <div class="absolute inset-0 bg-black/20"></div>
                 <div class="relative z-10 text-center nav-shadow">
                     <p class="text-4xl md:text-5xl font-bold mb-2">25 okt</p>
                     <p class="text-3xl md:text-4xl serif-italic italic">Stockholm</p>
                 </div>
-            </div>            
-            <div class="bg-gray-200 p-12 md:p-24 flex flex-col justify-center items-center text-center space-y-8 order-2 md:order-1 md:mb-1">
+            </div>
+            <div
+                class="bg-gray-200 p-12 md:p-24 flex flex-col justify-center items-center text-center space-y-8 order-2 md:order-1 md:mb-1">
                 <p class="text-gray-600 font-mono">Text about event</p>
                 <a href="#signup"
                     class="bg-white text-[#0033FF] px-10 py-2 rounded-full text-xs font-bold uppercase tracking-widest shadow-sm">Sign
                     Up</a>
             </div>
 
-    
+
             <div
                 class="relative h-[400px] md:h-auto flex flex-col justify-center items-center text-white order-3 md:order-4 md:mb-1">
-                <img src="images/DTS_NORDIC_by Gregory Woodman_001.webp" class="absolute inset-0 w-full h-full object-cover"
-                    alt="Stockholm Event">
+                <img src="images/DTS_NORDIC_by Gregory Woodman_001.webp"
+                    class="absolute inset-0 w-full h-full object-cover" alt="Stockholm Event">
                 <div class="absolute inset-0 bg-black/20"></div>
                 <div class="relative z-10 text-center nav-shadow">
                     <p class="text-4xl md:text-5xl font-bold mb-2">25 nov</p>
@@ -261,60 +329,66 @@
                     Up</a>
             </div>
         </div>
-</section>
+    </section>
 
-<section id="signup" class="flex flex-col">
-    <div class="relative h-[400px] md:h-[600px] flex flex-col items-center justify-center text-white text-center px-6">
-        <img src="images/DTS_NORDIC_by Gregory Woodman_0013.webp" class="absolute inset-0 w-full h-full object-cover" alt="Team Insights">
-        <div class="absolute inset-0 bg-black/20"></div>
-        <div class="relative z-10 max-w-4xl">
-            <h2 class="text-4xl md:text-6xl font-bold leading-tight nav-shadow">
-                Discover how to turn circularity <br>
-                <span class="serif-italic italic font-normal">into real business success</span>
-            </h2>
+    <section id="signup" class="flex flex-col">
+        <div
+            class="relative h-[400px] md:h-[600px] flex flex-col items-center justify-center text-white text-center px-6">
+            <img src="images/DTS_NORDIC_by Gregory Woodman_0013.webp"
+                class="absolute inset-0 w-full h-full object-cover" alt="Team Insights">
+            <div class="absolute inset-0 bg-black/20"></div>
+            <div class="relative z-10 max-w-4xl">
+                <h2 class="text-4xl md:text-6xl font-bold leading-tight nav-shadow">
+                    Discover how to turn circularity <br>
+                    <span class="serif-italic italic font-normal">into real business success</span>
+                </h2>
+            </div>
         </div>
-    </div>
 
-    <div class="bg-[#0033FF] text-white py-16 px-8 md:px-24 text-center">
-        <div class="max-w-4xl mx-auto">
-            <p class="text-xl md:text-2xl font-bold leading-relaxed">
-                In October 2026, we’ll open up the playbook (10 most successful Nordic circular business cases) behind the shift from linear to circular – highlighting the KPIs that matter, the business models driving profitability, and the structural conditions that enable systemic change.
-            </p>
-        </div>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 min-h-[500px]">
-        <div class="bg-white p-12 md:p-24 flex flex-col justify-center items-start md:items-end text-left md:text-right">
-            <div class="max-w-md">
-                <h3 class="text-[#0033FF] text-5xl md:text-6xl font-bold mb-4">Sign up.</h3>
-                <p class="text-[#0033FF] text-3xl md:text-4xl serif-italic italic leading-tight">
-                    It’s free - and it’s the only way in.
+        <div class="bg-[#0033FF] text-white py-16 px-8 md:px-24 text-center">
+            <div class="max-w-4xl mx-auto">
+                <p class="text-xl md:text-2xl font-bold leading-relaxed">
+                    In October 2026, we’ll open up the playbook (10 most successful Nordic circular business cases)
+                    behind the shift from linear to circular – highlighting the KPIs that matter, the business models
+                    driving profitability, and the structural conditions that enable systemic change.
                 </p>
             </div>
         </div>
 
-        <div class="bg-[#E5E5E5] p-12 md:p-24 flex flex-col justify-center items-start">
-            <form name="signup" method="POST" netlify data-netlify="true" class="w-full max-w-md space-y-4">
-                <input type="text" name="name" placeholder="ENTER YOUR NAME" required 
-                    class="w-full p-4 bg-white border-none text-xs tracking-widest font-mono focus:ring-2 focus:ring-[#0033FF] outline-none">
-                
-                <input type="text" name="business" placeholder="ENTER YOUR BUSINESS" required 
-                    class="w-full p-4 bg-white border-none text-xs tracking-widest font-mono focus:ring-2 focus:ring-[#0033FF] outline-none">
-                
-                <input type="email" name="email" placeholder="EMAIL ADRESS" required 
-                    class="w-full p-4 bg-white border-none text-xs tracking-widest font-mono focus:ring-2 focus:ring-[#0033FF] outline-none">
-                
-                <button type="submit" 
-                    class="bg-[#0033FF] text-white px-12 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-blue-700 transition shadow-lg">
-                    Submit
-                </button>
-            </form>
+        <div class="grid grid-cols-1 md:grid-cols-2 min-h-[500px]">
+            <div
+                class="bg-white p-12 md:p-24 flex flex-col justify-center items-start md:items-end text-left md:text-right">
+                <div class="max-w-md">
+                    <h3 class="text-[#0033FF] text-5xl md:text-6xl font-bold mb-4">Sign up.</h3>
+                    <p class="text-[#0033FF] text-3xl md:text-4xl serif-italic italic leading-tight">
+                        It’s free - and it’s the only way in.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-[#E5E5E5] p-12 md:p-24 flex flex-col justify-center items-start">
+                <form name="signup" method="POST" netlify data-netlify="true" class="w-full max-w-md space-y-4">
+                    <input type="text" name="name" placeholder="ENTER YOUR NAME" required
+                        class="w-full p-4 bg-white border-none text-xs tracking-widest font-mono focus:ring-2 focus:ring-[#0033FF] outline-none">
+
+                    <input type="text" name="business" placeholder="ENTER YOUR BUSINESS" required
+                        class="w-full p-4 bg-white border-none text-xs tracking-widest font-mono focus:ring-2 focus:ring-[#0033FF] outline-none">
+
+                    <input type="email" name="email" placeholder="EMAIL ADRESS" required
+                        class="w-full p-4 bg-white border-none text-xs tracking-widest font-mono focus:ring-2 focus:ring-[#0033FF] outline-none">
+
+                    <button type="submit"
+                        class="bg-[#0033FF] text-white px-12 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-blue-700 transition shadow-lg">
+                        Submit
+                    </button>
+                </form>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <footer class="bg-[#0033FF] text-white py-16 px-8 md:px-24">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center border-t border-white/20 pt-10">
+        <div
+            class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center border-t border-white/20 pt-10">
             <div class="h-12 md:h-16 mb-8 md:mb-0 brightness-0 invert">
                 <img src="images/frombelieftobankability_logo.png" alt="Logo" class="h-full w-auto">
             </div>
@@ -334,4 +408,5 @@
         }
     </script>
 </body>
+
 </html>
