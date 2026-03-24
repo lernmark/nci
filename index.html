@@ -50,54 +50,61 @@
 
 <body class="bg-white text-gray-900 overflow-x-hidden">
 
-<nav class="absolute top-0 w-full z-50">
-    <div class="flex md:hidden bg-white h-20 px-6 items-center justify-between">
-        <div class="w-12 text-[#0033FF]">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M19.5 5.5L4.5 20.5" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M10 5.5H19.5V15" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+    <nav class="absolute top-0 w-full z-50">
+        <div class="flex md:hidden bg-white h-20 px-6 items-center justify-between">
+            <div class="w-12 text-[#0033FF]">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.5 5.5L4.5 20.5" stroke="currentColor" stroke-width="4" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M10 5.5H19.5V15" stroke="currentColor" stroke-width="4" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </div>
+
+            <div class="flex-grow flex justify-center px-4">
+                <img src="images/frombelieftobankability_logo.png" alt="Logo"
+                    class="h-24 w-auto object-contain antialiased rendering-high-quality">
+            </div>
+
+            <button onclick="toggleMenu()" class="w-12 flex justify-end text-[#0033FF]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="3" stroke-linecap="round">
+                    <line x1="4" y1="8" x2="20" y2="8" />
+                    <line x1="4" y1="16" x2="16" y2="16" />
+                </svg>
+            </button>
         </div>
 
-        <div class="flex-grow flex justify-center px-4">
-            <img src="images/frombelieftobankability_logo.png" alt="Logo" class="h-16 w-auto object-contain">
-        </div>
+        <div class="hidden md:flex max-w-7xl mx-auto px-24 h-40 justify-between items-center relative">
+            <div class="flex items-center nav-shadow">
+                <div class="h-32 flex items-center">
+                    <img src="images/frombelieftobankability_logo.png" alt="Logo" class="h-full w-auto">
+                </div>
+            </div>
 
-        <button onclick="toggleMenu()" class="w-12 flex justify-end text-[#0033FF]">
-            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
-              <line x1="4" y1="8" x2="20" y2="8" />
-              <line x1="4" y1="16" x2="16" y2="16" />
-            </svg>
-        </button>
-    </div>
-
-    <div class="hidden md:flex max-w-7xl mx-auto px-24 h-40 justify-between items-center relative">
-        <div class="flex items-center nav-shadow">
-            <div class="h-32 flex items-center">
-                <img src="images/frombelieftobankability_logo.png" alt="Logo" class="h-full w-auto">
+            <div
+                class="flex space-x-12 text-[12px] font-bold uppercase tracking-[0.2em] items-center text-white nav-shadow">
+                <a href="#about" class="hover:opacity-70 transition">About us</a>
+                <a href="#signup" class="hover:opacity-70 transition">Sign up</a>
+                <a href="#meet-us" class="hover:opacity-70 transition">Meet us</a>
             </div>
         </div>
-        
-        <div class="flex space-x-12 text-[12px] font-bold uppercase tracking-[0.2em] items-center text-white nav-shadow">
-            <a href="#about" class="hover:opacity-70 transition">About us</a>
-            <a href="#signup" class="hover:opacity-70 transition">Sign up</a>
-            <a href="#meet-us" class="hover:opacity-70 transition">Meet us</a>
+
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-[#0033FF] z-50 transform translate-x-full md:hidden flex flex-col items-center justify-center space-y-8 text-white text-xl font-bold uppercase tracking-widest transition-transform duration-300">
+            <button onclick="toggleMenu()" class="absolute top-8 right-8 text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <a href="#about" onclick="toggleMenu()">About sssss</a>
+            <a href="#signup" onclick="toggleMenu()">Sign up</a>
+            <a href="#meet-us" onclick="toggleMenu()">Meet us</a>
         </div>
-    </div>
+    </nav>
 
-    <div id="mobile-menu" class="fixed inset-0 bg-[#0033FF] z-50 transform translate-x-full md:hidden flex flex-col items-center justify-center space-y-8 text-white text-xl font-bold uppercase tracking-widest transition-transform duration-300">
-        <button onclick="toggleMenu()" class="absolute top-8 right-8 text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-        </button>
-        <a href="#about" onclick="toggleMenu()">About us</a>
-        <a href="#signup" onclick="toggleMenu()">Sign up</a>
-        <a href="#meet-us" onclick="toggleMenu()">Meet us</a>
-    </div>
-</nav>
-
-    <div class="diagonal-pil text-white brightness-0 invert nav-shadow">
+    <div class="hidden md:block diagonal-pil text-white brightness-0 invert nav-shadow">
         <svg class="h-10 w-10 md:h-20 md:w-20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10" />
         </svg>
@@ -136,7 +143,7 @@
     <section id="cases" class="max-w-7xl mx-auto px-8 md:px-24 pb-24">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div
-                class="relative aspect-square bg-gray-100 overflow-hidden flex flex-col items-center justify-center border border-gray-200 group">
+                class="relative aspect-[16/9] md:aspect-square bg-gray-100 overflow-hidden flex flex-col items-center justify-center border border-gray-200 group">
                 <img src="images/DTS_NORDIC_by Gregory Woodman_002.webp"
                     class="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-20 transition"
                     alt="">
@@ -146,7 +153,7 @@
                 </div>
             </div>
             <div
-                class="relative aspect-square bg-gray-100 overflow-hidden flex flex-col items-center justify-center border border-gray-200 group">
+                class="relative aspect-[16/9] md:aspect-square bg-gray-100 overflow-hidden flex flex-col items-center justify-center border border-gray-200 group">
                 <img src="images/DTS_NORDIC_by Gregory Woodman_003.webp"
                     class="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-20 transition"
                     alt="">
@@ -156,7 +163,7 @@
                 </div>
             </div>
             <div
-                class="relative aspect-square bg-gray-100 overflow-hidden flex flex-col items-center justify-center border border-gray-200 group">
+                class="relative aspect-[16/9] md:aspect-square bg-gray-100 overflow-hidden flex flex-col items-center justify-center border border-gray-200 group">
                 <img src="images/DTS_NORDIC_by Gregory Woodman_008.webp"
                     class="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-20 transition"
                     alt="">
@@ -166,7 +173,7 @@
                 </div>
             </div>
             <div
-                class="relative aspect-square bg-gray-100 overflow-hidden flex flex-col items-center justify-center border border-gray-200 group">
+                class="relative aspect-[16/9] md:aspect-square bg-gray-100 overflow-hidden flex flex-col items-center justify-center border border-gray-200 group">
                 <img src="images/DTS_NORDIC_by Gregory Woodman_0010.webp"
                     class="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-20 transition"
                     alt="">
@@ -274,8 +281,8 @@
     </section>
     <section id="meet-us" class="bg-white md:mb-24">
         <div
-            class="relative h-[400px] md:h-[600px] flex flex-col items-center justify-center text-white text-center px-4">
-            <img src="images/DTS_NORDIC_by Gregory Woodman_007.webp" class="absolute inset-0 w-full h-full object-cover"
+            class="relative h-[300px] md:h-[600px] flex flex-col items-center justify-center text-white text-center px-4">
+            <img src="images/DTS_NORDIC_by Gregory Woodman_009.webp" class="absolute inset-0 w-full h-full object-cover"
                 alt="Meet us">
             <div class="absolute inset-0 bg-black/30"></div>
             <h2 class="relative z-10 text-5xl md:text-7xl font-bold nav-shadow">Meet us</h2>
@@ -293,7 +300,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2">
             <div
-                class="relative h-[400px] md:h-auto flex flex-col justify-center items-center text-white order-1 md:order-2 md:mb-1">
+                class="relative h-[300px] md:h-auto flex flex-col justify-center items-center text-white order-1 md:order-2 md:mb-1">
                 <img src="images/DTS_NORDIC_by Gregory Woodman_001.webp"
                     class="absolute inset-0 w-full h-full object-cover" alt="Stockholm Event">
                 <div class="absolute inset-0 bg-black/20"></div>
@@ -312,7 +319,7 @@
 
 
             <div
-                class="relative h-[400px] md:h-auto flex flex-col justify-center items-center text-white order-3 md:order-4 md:mb-1">
+                class="relative h-[300px] md:h-auto flex flex-col justify-center items-center text-white order-3 md:order-4 md:mb-1">
                 <img src="images/DTS_NORDIC_by Gregory Woodman_001.webp"
                     class="absolute inset-0 w-full h-full object-cover" alt="Stockholm Event">
                 <div class="absolute inset-0 bg-black/20"></div>
@@ -333,8 +340,8 @@
 
     <section id="signup" class="flex flex-col">
         <div
-            class="relative h-[400px] md:h-[600px] flex flex-col items-center justify-center text-white text-center px-6">
-            <img src="images/DTS_NORDIC_by Gregory Woodman_0013.webp"
+            class="relative h-[300px] md:h-[600px] flex flex-col items-center justify-center text-white text-center px-6">
+            <img src="images/DTS_NORDIC_by Gregory Woodman_003.webp"
                 class="absolute inset-0 w-full h-full object-cover" alt="Team Insights">
             <div class="absolute inset-0 bg-black/20"></div>
             <div class="relative z-10 max-w-4xl">
@@ -347,7 +354,7 @@
 
         <div class="bg-[#0033FF] text-white py-16 px-8 md:px-24 text-center">
             <div class="max-w-4xl mx-auto">
-                <p class="text-xl md:text-2xl font-bold leading-relaxed">
+                <p class="text-x2 md:text-2xl font-bold leading-relaxed">
                     In October 2026, we’ll open up the playbook (10 most successful Nordic circular business cases)
                     behind the shift from linear to circular – highlighting the KPIs that matter, the business models
                     driving profitability, and the structural conditions that enable systemic change.
@@ -388,8 +395,8 @@
 
     <footer class="bg-[#0033FF] text-white py-16 px-8 md:px-24">
         <div
-            class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center border-t border-white/20 pt-10">
-            <div class="h-12 md:h-16 mb-8 md:mb-0 brightness-0 invert">
+            class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="h-24 md:h-16 mb-8 md:mb-0">
                 <img src="images/frombelieftobankability_logo.png" alt="Logo" class="h-full w-auto">
             </div>
             <div class="flex space-x-8 text-[10px] uppercase tracking-widest opacity-80 font-bold">
