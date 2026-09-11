@@ -60,6 +60,11 @@
             padding: 2rem;
         }
 
+        .event-copy p {
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
         .event-image .text-4xl {
             font-size: clamp(1.7rem, 2.8vw, 2.2rem);
             line-height: 1.2;
@@ -69,6 +74,27 @@
         .event-image .text-3xl {
             font-size: clamp(1.5rem, 2.3vw, 1.9rem);
             line-height: 1.3;
+        }
+
+        @media (max-width: 767px) {
+            .event-item,
+            .event-card {
+                min-height: 220px;
+            }
+
+            .event-image,
+            .event-copy {
+                min-height: 220px;
+            }
+
+            .event-copy {
+                padding: 1rem;
+            }
+
+            .event-copy p {
+                font-size: 0.95rem;
+                line-height: 1.5;
+            }
         }
     </style>
 </head>
