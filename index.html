@@ -61,7 +61,7 @@
         }
 
         .event-copy p {
-            font-size: 0.85rem;
+            font-size: 0.90rem;
             line-height: 1.6;
         }
 
@@ -138,10 +138,10 @@
     
             <div class="flex justify-center items-center">
                 <div class="flex space-x-12 text-[12px] font-bold uppercase tracking-[0.2em] text-white">
+                    <a href="#signup" class="hover:opacity-70 transition">Sign up</a>
                     <a href="#meet-us" class="hover:opacity-70 transition">Meet us</a>
                     <!--<a href="#cases" class="hover:opacity-70 transition">Cases</a>-->
                     <a href="#about" class="hover:opacity-70 transition">About us</a>
-                    <a href="#signup" class="hover:opacity-70 transition">Sign up</a>
                 </div>
             </div>
         </div>
@@ -152,10 +152,10 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
+            <a href="#signup" onclick="toggleMenu()">Sign up</a>
             <a href="#meet-us" onclick="toggleMenu()">Meet us</a>
             <!--<a href="#cases" onclick="toggleMenu()">Cases</a>-->
             <a href="#about" onclick="toggleMenu()">About us</a>
-            <a href="#signup" onclick="toggleMenu()">Sign up</a>
         </div>
     </nav>
     <div class="hidden md:block diagonal-pil text-white brightness-0 invert">
@@ -195,7 +195,7 @@
             <!--<a href="#signup" class="underline">Get early access</a> and discover how 10 companies are making-->
         </h2>
     </div>
-
+    <!--
     <section id="cases" class="max-w-7xl mx-auto px-8 md:px-24 pb-24">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div
@@ -245,7 +245,7 @@
                 Cases</button>
         </div>
     </section>
-
+    -->
     <!-- <section class="grid grid-cols-1 md:grid-cols-2 min-h-[600px]">
         <div class="relative">
             <img src="images/DTS_NORDIC_by Gregory Woodman_006.webp" class="absolute inset-0 w-full h-full object-cover" alt="">
@@ -260,110 +260,61 @@
         </div>
     </section> -->
 
-    <section id="about" class="bg-white">
+    
+    <section class="flex flex-col" id="signup">
         <div
-            class="relative h-[400px] md:h-[600px] flex flex-col items-center justify-center text-white text-center px-6">
-            <img src="images/DTS_NORDIC_by Gregory Woodman_001.webp" class="absolute inset-0 w-full h-full object-cover"
-                alt="About initiative">
-            <div class="absolute inset-0 bg-black/30"></div>
-            <div class="relative z-10 max-w-5xl">
-                <h2 class="text-3xl md:text-5xl leading-tight mb-2">
-                    Nordic Circular Investments is a project initiated by Nordic Innovation with 
+            class="relative h-[300px] md:h-[600px] flex flex-col items-center justify-center text-white text-center px-6">
+            <img src="images/DTS_NORDIC_by Gregory Woodman_003.webp"
+                class="absolute inset-0 w-full h-full object-cover" alt="Team Insights">
+            <div class="absolute inset-0 bg-black/20"></div>
+            <div class="relative z-10 max-w-4xl">
+                <h2 class="text-4xl md:text-6xl font-bold leading-tight">
+                    Discover how to turn circularity <br>
+                    <span class="serif-italic italic font-normal">into real business success</span>
                 </h2>
-                <p class="text-3xl md:text-5xl serif-italic ">the aim to accelerate circular economy investments across the Nordics.</p>
             </div>
         </div>
 
-        <div class="max-w-4xl mx-auto py-16 px-8 text-center">
-            <p class="text-[#0033FF] text-xl md:text-2xl font-bold">
-                This project is led by Fundforward, in collaboration with Mixi and Circular Norway, and is supported by Nordic Innovation.
-            </p>
+        <div class="bg-[#0033FF] text-white py-16 px-8 md:px-24 text-center">
+            <div class="max-w-4xl mx-auto">
+                <p class="text-x2 md:text-2xl font-bold leading-relaxed">
+                    In October 2026, we’ll open up the playbook (10 most successful Nordic circular business cases)
+                    behind the shift from linear to circular – highlighting the KPIs that matter, the business models
+                    driving profitability, and the structural conditions that enable systemic change.
+                </p>
+            </div>
         </div>
 
-        <div class="max-w-7xl mx-auto px-8 md:px-24 pb-24 grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
-            <div class="space-y-16">
-                <div class="space-y-4">
-                    <h3 class="text-2xl font-bold">Fundforward</h3>
-                    <p class="text-gray-600 leading-relaxed font-mono text-sm">
-                        is a perspective-leading investor and ecosystem integrator in the circular economy space,
-                        combining hands-on investment experience with strategic ecosystem building. Fundforward backs
-                        entrepreneurs developing circular raw material loops and critical infrastructure solutions that
-                        enable system-level transformation.
-                    </p>
-                </div>
-                <div class="space-y-4">
-                    <h3 class="text-2xl font-bold">Circular Norway</h3>
-                    <p class="text-gray-600 leading-relaxed font-mono text-sm">
-                        Circular Norway is a leading impact organisation driving circular economy adoption across
-                        industries, with expertise in data-driven analysis, value chain mapping, and risk modelling. CN
-                        has a strong track record of collaborating with the financial sector – including banks, pension
-                        funds, and insurers – to integrate circular opportunities and risks into investment strategies.
+        <div class="grid grid-cols-1 md:grid-cols-2 min-h-[500px]">
+            <div class="bg-white p-12 md:p-24 flex flex-col justify-center items-start md:items-end text-left md:text-right">
+                <div class="max-w-md">
+                    <h3 class="text-[#0033FF] text-5xl md:text-6xl font-bold mb-4">Sign up</h3>
+                    <p class="text-[#0033FF] text-3xl md:text-4xl serif-italic italic leading-tight">
+                        It’s free - and it’s the only way in.
                     </p>
                 </div>
             </div>
+            <div class="bg-[#E5E5E5] p-12 md:p-24 flex flex-col justify-center items-start">
+                <form name="signup" method="POST" netlify data-netlify="true" class="w-full max-w-md space-y-4">
+                    <input type="text" name="name" placeholder="ENTER YOUR NAME" required
+                        class="w-full p-4 bg-white border-none text-xs tracking-widest font-mono focus:ring-2 focus:ring-[#0033FF] outline-none">
 
-            <div class="space-y-16">
-                <div class="space-y-4">
-                    <h3 class="text-2xl font-bold">Mixi</h3>
-                    <p class="text-gray-600 leading-relaxed font-mono text-sm">
-                        MIXI is a dynamic ecosystem catalyst based in Helsinki, accelerating the transition to a
-                        circular economy by empowering entrepreneurship through tailored programs, curated events, and
-                        multi-sector collaboration.
-                    </p>
-                </div>
+                    <input type="text" name="business" placeholder="ENTER YOUR BUSINESS" required
+                        class="w-full p-4 bg-white border-none text-xs tracking-widest font-mono focus:ring-2 focus:ring-[#0033FF] outline-none">
 
-                <div class="space-y-4">
-                    <h3 class="text-2xl font-bold">Nordic Innovation</h3>
-                    <p class="text-gray-600 leading-relaxed font-mono text-sm">
-                        Nordic Circular investments is supported by Nordic Innovation. Nordic Innovation is an organization 
-                        under the Nordic Council of Ministers that works to make the Nordics a pioneering region for 
-                        sustainable growth by promoting entrepreneurship, innovation and competitiveness in Nordic businesses.
-                    </p>
-                    <a href="https://www.nordicinnovation.org/programs/nordic-circular-investments" target="_blank"
-                        class="inline-block text-sm font-bold border-b-2 border-black pb-1 hover:text-[#0033FF] hover:border-[#0033FF] transition">
-                        Read more about the project Nordic Circular Investments >>
-                    </a>
-                </div>                
+                    <input type="email" name="email" placeholder="EMAIL ADRESS" required
+                        class="w-full p-4 bg-white border-none text-xs tracking-widest font-mono focus:ring-2 focus:ring-[#0033FF] outline-none">
+
+                    <button type="submit"
+                        class="bg-[#0033FF] text-white px-12 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-blue-700 transition">
+                        Submit
+                    </button>
+                </form>
             </div>
-            <div class="space-y-16">
-                <!--
-                <div class="bg-gray-100 p-10 md:p-16 relative min-h-[300px] flex flex-col justify-between" onclick="location.hash = 'signup'">
-                    <div class="flex justify-between items-start">
-                        <div class="text-[#0033FF]">
-                            <h3 class="text-3xl font-bold">Sign up for</h3>
-                            <p class="text-2xl serif-italic italic">early access</p>
-                        </div>
-                        <svg class="w-16 h-16 text-[#0033FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M7 17L17 7M17 7H7M17 7v10" />
-                        </svg>
-                    </div>
-                    <div class="border-t border-black pt-6">
-                        <p class="text-xs font-mono text-gray-600">Access curated circular investment opportunities.</p>
-                    </div>
-                </div>
-                -->
-
-                <a href="https://form.typeform.com/to/DwKBsRQ8" target="_blank"
-                        class="bg-gray-100 p-10 md:p-16 relative min-h-[300px] flex flex-col justify-between">
-                    <div class="flex justify-between items-start">
-                        <div class="text-[#0033FF]">
-                            <h3 class="text-3xl font-bold">Share your best</h3>
-                            <p class="text-2xl serif-italic italic">circular case </p>
-                        </div>
-                        <svg class="w-16 h-16 text-[#0033FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M7 17L17 7M17 7H7M17 7v10" />
-                        </svg>
-                    </div>
-                    <div class="border-t border-black pt-6">
-                        <p class="text-xs font-mono text-gray-600">Tell us about the innovation we shouldn't miss. Take our 5-minute survey.</p>
-                    </div>
-                </a>
-
-            </div>
+            
         </div>
     </section>
+
     <section id="meet-us" class="bg-white md:mb-24">        
         <div
             class="relative h-[300px] md:h-[600px] flex flex-col items-center justify-center text-white text-center px-4">
@@ -469,7 +420,7 @@
                         <div class="absolute inset-0 bg-black/20"></div>
                         <div class="relative z-10 text-center">
                             <p class="text-4xl md:text-5xl font-bold mb-2">September 17 2026</p>
-                            <p class="text-3xl md:text-4xl serif-italic italic">The World Circular Economy Forum WCEF Accelerator Session (Online)</p>
+                            <p class="text-3xl md:text-4xl serif-italic italic">The World Circular Economy Forum WCEF<br/>Accelerator Session (Online)</p>
                         </div>
                     </div>
                     <div
@@ -491,7 +442,7 @@
                         <div class="absolute inset-0 bg-black/20"></div>
                         <div class="relative z-10 text-center">
                             <p class="text-4xl md:text-5xl font-bold mb-2">October 1st 2026</p>
-                            <p class="text-3xl md:text-4xl serif-italic italic">Stockholm Impact Days (Stockholm & online)</p>
+                            <p class="text-3xl md:text-4xl serif-italic italic">Stockholm Impact Days<br/>(Stockholm & online)</p>
                         </div>
                     </div>
                     <div
@@ -512,7 +463,7 @@
                         <div class="absolute inset-0 bg-black/20"></div>
                         <div class="relative z-10 text-center">
                             <p class="text-4xl md:text-5xl font-bold mb-2">October 26 2026 </p>
-                            <p class="text-3xl md:text-4xl serif-italic italic">The Nordic Circular Investments Main Event (Online)</p>
+                            <p class="text-3xl md:text-4xl serif-italic italic">The Nordic Circular Investments<br/>Main Event (Online)</p>
                         </div>
                     </div>
                     <div
@@ -556,63 +507,114 @@
         
     </section>
 
-    
-    <section class="flex flex-col" >
+
+
+    <section id="about" class="bg-white">
         <div
-            class="relative h-[300px] md:h-[600px] flex flex-col items-center justify-center text-white text-center px-6">
-            <img src="images/DTS_NORDIC_by Gregory Woodman_003.webp"
-                class="absolute inset-0 w-full h-full object-cover" alt="Team Insights">
-            <div class="absolute inset-0 bg-black/20"></div>
-            <div class="relative z-10 max-w-4xl">
-                <h2 class="text-4xl md:text-6xl font-bold leading-tight">
-                    Discover how to turn circularity <br>
-                    <span class="serif-italic italic font-normal">into real business success</span>
+            class="relative h-[400px] md:h-[600px] flex flex-col items-center justify-center text-white text-center px-6">
+            <img src="images/DTS_NORDIC_by Gregory Woodman_001.webp" class="absolute inset-0 w-full h-full object-cover"
+                alt="About initiative">
+            <div class="absolute inset-0 bg-black/30"></div>
+            <div class="relative z-10 max-w-5xl">
+                <h2 class="text-3xl md:text-5xl leading-tight mb-2">
+                    Nordic Circular Investments is a project initiated by Nordic Innovation with 
                 </h2>
+                <p class="text-3xl md:text-5xl serif-italic ">the aim to accelerate circular economy investments across the Nordics.</p>
             </div>
         </div>
 
-        <div class="bg-[#0033FF] text-white py-16 px-8 md:px-24 text-center">
-            <div class="max-w-4xl mx-auto">
-                <p class="text-x2 md:text-2xl font-bold leading-relaxed">
-                    In October 2026, we’ll open up the playbook (10 most successful Nordic circular business cases)
-                    behind the shift from linear to circular – highlighting the KPIs that matter, the business models
-                    driving profitability, and the structural conditions that enable systemic change.
-                </p>
-            </div>
+        <div class="max-w-4xl mx-auto py-16 px-8 text-center">
+            <p class="text-[#0033FF] text-xl md:text-2xl font-bold">
+                This project is led by Fundforward, in collaboration with Mixi and Circular Norway, and is supported by Nordic Innovation.
+            </p>
         </div>
 
-        <div id="signup" class="grid grid-cols-1 md:grid-cols-2 min-h-[500px]">
-            <div class="bg-white p-12 md:p-24 flex flex-col justify-center items-start md:items-end text-left md:text-right">
-                <div class="max-w-md">
-                    <h3 class="text-[#0033FF] text-5xl md:text-6xl font-bold mb-4">Sign up</h3>
-                    <!--<p class="text-[#0033FF] text-3xl md:text-4xl serif-italic italic leading-tight">
-                        It’s free - and it’s the only way in.
+        <div class="max-w-7xl mx-auto px-8 md:px-24 pb-24 grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
+            <div class="space-y-16">
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-bold">Fundforward</h3>
+                    <p class="text-gray-600 leading-relaxed font-mono text-sm">
+                        is a perspective-leading investor and ecosystem integrator in the circular economy space,
+                        combining hands-on investment experience with strategic ecosystem building. Fundforward backs
+                        entrepreneurs developing circular raw material loops and critical infrastructure solutions that
+                        enable system-level transformation.
                     </p>
-                    -->
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-bold">Circular Norway</h3>
+                    <p class="text-gray-600 leading-relaxed font-mono text-sm">
+                        Circular Norway is a leading impact organisation driving circular economy adoption across
+                        industries, with expertise in data-driven analysis, value chain mapping, and risk modelling. CN
+                        has a strong track record of collaborating with the financial sector – including banks, pension
+                        funds, and insurers – to integrate circular opportunities and risks into investment strategies.
+                    </p>
                 </div>
             </div>
-            <div class="bg-[#E5E5E5] p-12 md:p-24 flex flex-col justify-center items-start">
-                <form name="signup" method="POST" netlify data-netlify="true" class="w-full max-w-md space-y-4">
-                    <input type="text" name="name" placeholder="ENTER YOUR NAME" required
-                        class="w-full p-4 bg-white border-none text-xs tracking-widest font-mono focus:ring-2 focus:ring-[#0033FF] outline-none">
 
-                    <input type="text" name="business" placeholder="ENTER YOUR BUSINESS" required
-                        class="w-full p-4 bg-white border-none text-xs tracking-widest font-mono focus:ring-2 focus:ring-[#0033FF] outline-none">
+            <div class="space-y-16">
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-bold">Mixi</h3>
+                    <p class="text-gray-600 leading-relaxed font-mono text-sm">
+                        MIXI is a dynamic ecosystem catalyst based in Helsinki, accelerating the transition to a
+                        circular economy by empowering entrepreneurship through tailored programs, curated events, and
+                        multi-sector collaboration.
+                    </p>
+                </div>
 
-                    <input type="email" name="email" placeholder="EMAIL ADRESS" required
-                        class="w-full p-4 bg-white border-none text-xs tracking-widest font-mono focus:ring-2 focus:ring-[#0033FF] outline-none">
-
-                    <button type="submit"
-                        class="bg-[#0033FF] text-white px-12 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-blue-700 transition">
-                        Submit
-                    </button>
-                </form>
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-bold">Nordic Innovation</h3>
+                    <p class="text-gray-600 leading-relaxed font-mono text-sm">
+                        Nordic Circular investments is supported by Nordic Innovation. Nordic Innovation is an organization 
+                        under the Nordic Council of Ministers that works to make the Nordics a pioneering region for 
+                        sustainable growth by promoting entrepreneurship, innovation and competitiveness in Nordic businesses.
+                    </p>
+                    <a href="https://www.nordicinnovation.org/programs/nordic-circular-investments" target="_blank"
+                        class="inline-block text-sm font-bold border-b-2 border-black pb-1 hover:text-[#0033FF] hover:border-[#0033FF] transition">
+                        Read more about the project Nordic Circular Investments >>
+                    </a>
+                </div>                
             </div>
-            
+            <div class="space-y-16">
+                <!--
+                <div class="bg-gray-100 p-10 md:p-16 relative min-h-[300px] flex flex-col justify-between" onclick="location.hash = 'signup'">
+                    <div class="flex justify-between items-start">
+                        <div class="text-[#0033FF]">
+                            <h3 class="text-3xl font-bold">Sign up for</h3>
+                            <p class="text-2xl serif-italic italic">early access</p>
+                        </div>
+                        <svg class="w-16 h-16 text-[#0033FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M7 17L17 7M17 7H7M17 7v10" />
+                        </svg>
+                    </div>
+                    <div class="border-t border-black pt-6">
+                        <p class="text-xs font-mono text-gray-600">Access curated circular investment opportunities.</p>
+                    </div>
+                </div>
+                -->
+
+                <a href="https://form.typeform.com/to/DwKBsRQ8" target="_blank"
+                        class="bg-gray-100 p-10 md:p-16 relative min-h-[300px] flex flex-col justify-between">
+                    <div class="flex justify-between items-start">
+                        <div class="text-[#0033FF]">
+                            <h3 class="text-3xl font-bold">Share your best</h3>
+                            <p class="text-2xl serif-italic italic">circular case </p>
+                        </div>
+                        <svg class="w-16 h-16 text-[#0033FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M7 17L17 7M17 7H7M17 7v10" />
+                        </svg>
+                    </div>
+                    <div class="border-t border-black pt-6">
+                        <p class="text-xs font-mono text-gray-600">Tell us about the innovation we shouldn't miss. Take our 5-minute survey.</p>
+                    </div>
+                </a>
+
+            </div>
         </div>
     </section>
 
-<footer class="bg-[#0033FF] text-white py-16 px-8 md:px-24">
+    <footer class="bg-[#0033FF] text-white py-16 px-8 md:px-24">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
         
         <div class="flex items-center gap-8 mb-8 md:mb-0">
@@ -625,10 +627,10 @@
         </div>
 
         <div class="flex space-x-8 text-[10px] uppercase tracking-widest opacity-80 font-bold">
-            <a href="#meet-us" class="hover:opacity-100 transition">Meet us</a>
-            <a href="#about" class="hover:opacity-100 transition">About us</a>
-            <!--<a href="#about" class="hover:opacity-100 transition">Cases</a>-->
             <a href="#signup" class="hover:opacity-100 transition">Sign up</a>
+            <a href="#meet-us" class="hover:opacity-100 transition">Meet us</a>
+            <!--<a href="#about" class="hover:opacity-100 transition">Cases</a>-->
+            <a href="#about" class="hover:opacity-100 transition">About us</a>
         </div>
     </div>
 </footer>
