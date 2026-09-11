@@ -41,6 +41,36 @@
                 z-index: 60;
             }
         }
+
+        .event-grid {
+            margin-top: 2rem;
+        }
+
+        .event-item,
+        .event-card {
+            min-height: 440px;
+        }
+
+        .event-image,
+        .event-copy {
+            min-height: 440px;
+        }
+
+        .event-copy {
+            padding: 2rem;
+        }
+
+        .event-card {
+            gap: 1rem;
+        }
+
+        .event-image .text-4xl {
+            font-size: clamp(2rem, 3vw, 2.6rem);
+        }
+
+        .event-image .text-3xl {
+            font-size: clamp(1.7rem, 2.5vw, 2.2rem);
+        }
     </style>
 </head>
 
@@ -141,7 +171,7 @@
         </h2>
     </div>
 
-    <!--<section id="cases" class="max-w-7xl mx-auto px-8 md:px-24 pb-24">
+    <section id="cases" class="max-w-7xl mx-auto px-8 md:px-24 pb-24">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div
                 class="relative aspect-[16/4] md:aspect-square bg-gray-100 overflow-hidden flex flex-col items-center justify-center border border-gray-200 group">
@@ -189,7 +219,7 @@
                 class="bg-[#0033FF] text-white px-8 py-3 rounded-full font-bold uppercase tracking-widest text-xs">Browse
                 Cases</button>
         </div>
-    </section>-->
+    </section>
 
     <!-- <section class="grid grid-cols-1 md:grid-cols-2 min-h-[600px]">
         <div class="relative">
@@ -380,129 +410,113 @@
         </div>
         -->
 
-        <div class="grid grid-cols-1 md:grid-cols-2">
-            <div
-                class="relative h-[300px] md:h-auto flex flex-col justify-center items-center text-white order-1 md:order-2 md:mb-1">
-                <img src="images/DTS_NORDIC_by Gregory Woodman_002.webp"
-                    class="absolute inset-0 w-full h-full object-cover" alt="Stockholm Event">
-                <div class="absolute inset-0 bg-black/20"></div>
-                <div class="relative z-10 text-center">
-                    <p class="text-4xl md:text-5xl font-bold mb-2">September 15-16 2026</p>
-                    <p class="text-3xl md:text-4xl serif-italic italic">The Drop - Malmö</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 event-grid">
+            <article class="event-item">
+                <div class="event-card grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                    <div
+                        class="event-image relative h-[300px] md:h-[440px] flex flex-col justify-center items-center text-white md:mb-1">
+                        <img src="images/DTS_NORDIC_by Gregory Woodman_002.webp"
+                            class="absolute inset-0 w-full h-full object-cover" alt="Stockholm Event">
+                        <div class="absolute inset-0 bg-black/20"></div>
+                        <div class="relative z-10 text-center">
+                            <p class="text-4xl md:text-5xl font-bold mb-2">September 15-16 2026</p>
+                            <p class="text-3xl md:text-4xl serif-italic italic">The Drop - Malmö</p>
+                        </div>
+                    </div>
+                    <div
+                        class="event-copy bg-gray-200 flex flex-col justify-center items-center text-center space-y-8 md:mb-1">
+                        <p class="text-gray-600 font-mono">
+                            Meet <a href="https://www.linkedin.com/company/fund-forward" target="_blank" class="underline">Fundforward</a> and 
+                            <a href="https://www.linkedin.com/in/fredrik-blomquist-startup/" target="_blank" class="underline">Fredrik Blomquist Lundli</a> 
+                            at this leading impact investment event.
+                            <br/><a href="https://www.thedropconf.com/" class="underline">https://www.thedropconf.com/</a>
+                        </p>          
+                    </div>
                 </div>
-            </div>
-            <div
-                class="bg-gray-200 p-12 md:p-24 flex flex-col justify-center items-center text-center space-y-8 order-2 md:order-1 md:mb-1">
-                <p class="text-gray-600 font-mono">
-                    Meet <a href="https://www.linkedin.com/company/fund-forward" target="_blank" class="underline">Fundforward</a> and 
-                    <a href="https://www.linkedin.com/in/fredrik-blomquist-startup/" target="_blank" class="underline">Fredrik Blomquist Lundli</a> 
-                    at this leading impact investment event.
-                    <br/><a href="https://www.thedropconf.com/" class="underline">https://www.thedropconf.com/</a>
-                </p>          
-            </div>
+            </article>
 
-            <!--
-            <div
-                class="relative h-[300px] md:h-auto flex flex-col justify-center items-center text-white order-1 md:order-2 md:mb-1">
-                <img src="images/DTS_NORDIC_by Gregory Woodman_002.webp"
-                    class="absolute inset-0 w-full h-full object-cover" alt="Stockholm Event">
-                <div class="absolute inset-0 bg-black/20"></div>
-                <div class="relative z-10 text-center">
-                    <p class="text-4xl md:text-5xl font-bold mb-2">April 28-29 2026</p>
-                    <p class="text-3xl md:text-4xl serif-italic italic">Loop Forum - Copenhagen</p>
+            <article class="event-item">
+                <div class="event-card grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                    <div
+                        class="event-image relative h-[300px] md:h-[440px] flex flex-col justify-center items-center text-white md:mb-1">
+                        <img src="images/DTS_NORDIC_by Gregory Woodman_001.webp"
+                            class="absolute inset-0 w-full h-full object-cover" alt="Stockholm Event">
+                        <div class="absolute inset-0 bg-black/20"></div>
+                        <div class="relative z-10 text-center">
+                            <p class="text-4xl md:text-5xl font-bold mb-2">September 17 2026</p>
+                            <p class="text-3xl md:text-4xl serif-italic italic">The World Circular Economy Forum WCEF Accelerator Session (Online)</p>
+                        </div>
+                    </div>
+                    <div
+                        class="event-copy bg-gray-200 flex flex-col justify-center items-center text-center space-y-8 md:mb-1">
+                        <p class="text-gray-600 font-mono">
+                            Building and Financing Circular Value Chains: Live Cases from India and the Nordics Led by <a href="https://www.linkedin.com/company/strideventures/" target="_blank" class="underline">Stride Asset Management, Nordic Innovation</a>, and the <strong>Nordic Circular Investments team</strong>.<br/>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdIdqmqi3CmFYW9n0aS_QhNQltJRhFxJBVdDFYMg6PVKYt0Pg/viewform?usp=send_form" class="underline" target="_blank">Please register here</a>
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div
-                class="bg-gray-200 p-12 md:p-24 flex flex-col justify-center items-center text-center space-y-8 order-2 md:order-1 md:mb-1">
-                <p class="text-gray-600 font-mono">Meet us at Nordic Innovation exhibition area and on stage <a href="https://www.loopforum.dk/">https://www.loopforum.dk/</a></p>          
-            </div>
-            -->
-            <!--
-            <div
-                class="relative h-[300px] md:h-auto flex flex-col justify-center items-center text-white order-3 md:order-4 md:mb-1">
-                <img src="images/DTS_NORDIC_by Gregory Woodman_001.webp"
-                    class="absolute inset-0 w-full h-full object-cover" alt="Stockholm Event">
-                <div class="absolute inset-0 bg-black/20"></div>
-                <div class="relative z-10 text-center">
-                    <p class="text-4xl md:text-5xl font-bold mb-2">May 6-7 2026</p>
-                    <p class="text-3xl md:text-4xl serif-italic italic">Den Store Sirkulær konferanen - Oslo</p>
-                </div>
-            </div>
-            <div
-                class="bg-gray-200 p-12 md:p-24 flex flex-col justify-center items-center text-center space-y-8 order-4 md:order-3 md:mb-1">
-                <p class="text-gray-600 font-mono">Welcome to our event at the Circular Conference <a href="https://www.sirkulaerkonferansen.no/">https://www.sirkulaerkonferansen.no/</a></p>
-            </div>
-            -->
-            
-            <div
-                class="relative h-[300px] md:h-auto flex flex-col justify-center items-center text-white order-3 md:order-4 md:mb-1">
-                <img src="images/DTS_NORDIC_by Gregory Woodman_001.webp"
-                    class="absolute inset-0 w-full h-full object-cover" alt="Stockholm Event">
-                <div class="absolute inset-0 bg-black/20"></div>
-                <div class="relative z-10 text-center">
-                    <p class="text-4xl md:text-5xl font-bold mb-2">September 17 2026</p>
-                    <p class="text-3xl md:text-4xl serif-italic italic">The World Circular Economy Forum WCEF Accelerator Session (Online)</p>
-                </div>
-            </div>
-            <div
-                class="bg-gray-200 p-12 md:p-24 flex flex-col justify-center items-center text-center space-y-8 order-4 md:order-3 md:mb-1">
-                <p class="text-gray-600 font-mono">
-                    Building and Financing Circular Value Chains: Live Cases from India and the Nordics Led by <a href="https://www.linkedin.com/company/strideventures/" target="_blank" class="underline">Stride Asset Management, Nordic Innovation</a>, and the <strong>Nordic Circular Investments team</strong>.<br/>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdIdqmqi3CmFYW9n0aS_QhNQltJRhFxJBVdDFYMg6PVKYt0Pg/viewform?usp=send_form" class="underline" target="_blank">Please register here</a>
-                    <!--Join our online WCEF2026 accelerator session <br/><a href="https://www.mixicenter.com/events/wcef2026-accelerator-session-building-and-financing-circular-value-chains-live-cases-from-india-and-the-nordics" class="underline">Link to the event</a>-->
-                </p>
-            </div>
-            
-            <div
-                class="relative h-[300px] md:h-auto flex flex-col justify-center items-center text-white order-5 md:order-6 md:mb-1">
-                <img src="images/DTS_NORDIC_by Gregory Woodman_003.webp"
-                    class="absolute inset-0 w-full h-full object-cover" alt="Stockholm Event">
-                <div class="absolute inset-0 bg-black/20"></div>
-                <div class="relative z-10 text-center">
-                    <p class="text-4xl md:text-5xl font-bold mb-2">October 1st 2026</p>
-                    <p class="text-3xl md:text-4xl serif-italic italic">Stockholm Impact Days (Stockholm & online)</p>
-                </div>
-            </div>
-            <div
-                class="bg-gray-200 p-12 md:p-24 flex flex-col justify-center items-center text-center space-y-8 order-6 md:order-5 md:mb-1">
-                <p class="text-gray-600 font-mono">
-                    We are going to have a session focused on "Investors' Perspectives on Financing Urban Innovation", October 1st. See <a href="https://public.paloma.se/webversion?cid=26772&cmg=31d23684-96ad-485a-8327-fdc745b1b8d5&g=9a7de797-c76d-4c33-a83c-e25f4a8e3777&languageCode=sv" class="underline" target="_blank">here</a> more info & registration link
-                </p>
-            </div>
+            </article>
 
-            
-            <div
-                class="relative h-[300px] md:h-auto flex flex-col justify-center items-center text-white order-7 md:order-8 md:mb-1">
-                <img src="images/DTS_NORDIC_by Gregory Woodman_0014.webp"
-                    class="absolute inset-0 w-full h-full object-cover" alt="Stockholm Event">
-                <div class="absolute inset-0 bg-black/20"></div>
-                <div class="relative z-10 text-center">
-                    <p class="text-4xl md:text-5xl font-bold mb-2">October 26 2026 </p>
-                    <p class="text-3xl md:text-4xl serif-italic italic">The Nordic Circular Investments Main Event (Online)</p>
+            <article class="event-item">
+                <div class="event-card grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                    <div
+                        class="event-image relative h-[300px] md:h-[440px] flex flex-col justify-center items-center text-white md:mb-1">
+                        <img src="images/DTS_NORDIC_by Gregory Woodman_003.webp"
+                            class="absolute inset-0 w-full h-full object-cover" alt="Stockholm Event">
+                        <div class="absolute inset-0 bg-black/20"></div>
+                        <div class="relative z-10 text-center">
+                            <p class="text-4xl md:text-5xl font-bold mb-2">October 1st 2026</p>
+                            <p class="text-3xl md:text-4xl serif-italic italic">Stockholm Impact Days (Stockholm & online)</p>
+                        </div>
+                    </div>
+                    <div
+                        class="event-copy bg-gray-200 flex flex-col justify-center items-center text-center space-y-8 md:mb-1">
+                        <p class="text-gray-600 font-mono">
+                            We are going to have a session focused on "Investors' Perspectives on Financing Urban Innovation", October 1st. See <a href="https://public.paloma.se/webversion?cid=26772&cmg=31d23684-96ad-485a-8327-fdc745b1b8d5&g=9a7de797-c76d-4c33-a83c-e25f4a8e3777&languageCode=sv" class="underline" target="_blank">here</a> more info & registration link
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div
-                class="bg-gray-200 p-12 md:p-24 flex flex-col justify-center items-center text-center space-y-8 order-8 md:order-7 md:mb-1">
-                <p class="text-gray-600 font-mono">
-                    We'll reveal the Ten Best Nordic Circular Cases. <br/><a href="https://forms.gle/VekkdX3bwyaaVNaZA" class="underline" target="_blank">Register here</a>
-                </p>
-            </div>
-            
-            <div
-                class="relative h-[300px] md:h-auto flex flex-col justify-center items-center text-white order-9 md:order-10 md:mb-1">
-                <img src="images/DTS_NORDIC_by Gregory Woodman_004.webp"
-                    class="absolute inset-0 w-full h-full object-cover" alt="Stockholm Event">
-                <div class="absolute inset-0 bg-black/20"></div>
-                <div class="relative z-10 text-center">
-                    <p class="text-4xl md:text-5xl font-bold mb-2">November 18 2026</p>
-                    <p class="text-3xl md:text-4xl serif-italic italic">SAVE the DATE<br/>Slush side event (Helsinki)</p>
+            </article>
+
+            <article class="event-item">
+                <div class="event-card grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                    <div
+                        class="event-image relative h-[300px] md:h-[440px] flex flex-col justify-center items-center text-white md:mb-1">
+                        <img src="images/DTS_NORDIC_by Gregory Woodman_0014.webp"
+                            class="absolute inset-0 w-full h-full object-cover" alt="Stockholm Event">
+                        <div class="absolute inset-0 bg-black/20"></div>
+                        <div class="relative z-10 text-center">
+                            <p class="text-4xl md:text-5xl font-bold mb-2">October 26 2026 </p>
+                            <p class="text-3xl md:text-4xl serif-italic italic">The Nordic Circular Investments Main Event (Online)</p>
+                        </div>
+                    </div>
+                    <div
+                        class="event-copy bg-gray-200 flex flex-col justify-center items-center text-center space-y-8 md:mb-1">
+                        <p class="text-gray-600 font-mono">
+                            We'll reveal the Ten Best Nordic Circular Cases. <br/><a href="https://forms.gle/VekkdX3bwyaaVNaZA" class="underline" target="_blank">Register here</a>
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div
-                class="bg-gray-200 p-12 md:p-24 flex flex-col justify-center items-center text-center space-y-8 order-10 md:order-9 md:mb-1">
-                <p class="text-gray-600 font-mono">The Investment Case of Critical Raw Materials. More details coming soon!</p>
-            </div>
-                        
+            </article>
+
+            <article class="event-item">
+                <div class="event-card grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                    <div
+                        class="event-image relative h-[300px] md:h-[440px] flex flex-col justify-center items-center text-white md:mb-1">
+                        <img src="images/DTS_NORDIC_by Gregory Woodman_004.webp"
+                            class="absolute inset-0 w-full h-full object-cover" alt="Stockholm Event">
+                        <div class="absolute inset-0 bg-black/20"></div>
+                        <div class="relative z-10 text-center">
+                            <p class="text-4xl md:text-5xl font-bold mb-2">November 18 2026</p>
+                            <p class="text-3xl md:text-4xl serif-italic italic">SAVE the DATE<br/>Slush side event (Helsinki)</p>
+                        </div>
+                    </div>
+                    <div
+                        class="event-copy bg-gray-200 flex flex-col justify-center items-center text-center space-y-8 md:mb-1">
+                        <p class="text-gray-600 font-mono">The Investment Case of Critical Raw Materials. More details coming soon!</p>
+                    </div>
+                </div>
+            </article>
         </div>
 
         <div class="max-w-4xl mx-auto py-16 px-8 text-center space-y-6">
