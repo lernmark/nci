@@ -25,6 +25,24 @@
             transition: transform 0.3s ease-in-out;
         }
 
+        @media (min-width: 768px) {
+            .diagonal-pil {
+                position: fixed;
+                left: 24px;
+                top: 48px;
+                z-index: 60;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .diagonal-pil {
+                position: absolute;
+                left: 16px;
+                top: 16px;
+                z-index: 60;
+            }
+        }
+
         .case-row {
             min-height: 180px;
         }
@@ -40,13 +58,22 @@
 <body class="bg-white text-gray-900 overflow-x-hidden">
     <header class="relative">
         <nav class="absolute top-0 w-full z-50">
-            <div class="flex md:hidden bg-white/95 h-20 px-6 items-center justify-between">
-                <a href="index.html" aria-label="Nordic Circular Investments home">
-                    <img src="images/frombelieftobankability_logo_cropped.png" alt="From Belief to Bankability"
-                        class="h-12 w-auto object-contain">
-                </a>
+            <div class="flex md:hidden bg-white h-20 px-2 items-center justify-between">
+                <div class="w-12 text-[#0033FF]">
+                    <a href="index.html#home" aria-label="Nordic Circular Investments home" class="hover:opacity-70 transition">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.5 5.5L4.5 20.5" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M10 5.5H19.5V15" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="flex-grow flex justify-center px-2">
+                    <a href="index.html" aria-label="Nordic Circular Investments home" class="hover:opacity-70 transition">
+                        <img src="images/frombelieftobankability_logo_cropped.png" alt="From Belief to Bankability" class="h-12 w-auto object-contain">
+                    </a>
+                </div>
                 <button type="button" onclick="toggleMenu()" aria-label="Open menu" aria-controls="mobile-menu"
-                    aria-expanded="false" class="text-[#0033FF]">
+                    aria-expanded="false" class="w-12 flex justify-end text-[#0033FF]">
                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="3" stroke-linecap="round">
                         <line x1="4" y1="8" x2="20" y2="8" />
@@ -56,9 +83,8 @@
             </div>
 
             <div class="hidden md:flex max-w-7xl mx-auto px-12 h-32 items-center justify-between">
-                <a href="index.html" aria-label="Nordic Circular Investments home">
-                    <img src="images/frombelieftobankability_logo.png" alt="From Belief to Bankability"
-                        class="h-20 w-auto object-contain">
+                <a href="index.html" aria-label="Nordic Circular Investments home" class="hover:opacity-70 transition">
+                    <img src="images/frombelieftobankability_logo.png" alt="From Belief to Bankability" class="h-20 w-auto object-contain">
                 </a>
                 <div class="flex gap-10 text-[12px] font-bold uppercase tracking-[0.2em] text-white">
                     <a href="index.html#signup" class="hover:opacity-70 transition">Sign up</a>
@@ -84,6 +110,14 @@
                 <a href="index.html#about" onclick="toggleMenu()">About us</a>
             </div>
         </nav>
+
+        <div class="hidden md:block diagonal-pil text-white brightness-0 invert">
+            <a href="index.html" aria-label="Nordic Circular Investments home" class="hover:opacity-70 transition">
+                <svg class="h-10 w-10 md:h-20 md:w-20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10" />
+                </svg>
+            </a>
+        </div>
 
         <section class="relative min-h-[300px] md:min-h-[420px] flex items-center justify-center text-center text-white px-6 pt-24 pb-12">
             <img src="images/DTS_NORDIC_by Gregory Woodman_004.webp" alt="Nordic landscape"
@@ -115,7 +149,11 @@
                 </div>
                 <a href="index.html#signup" class="relative overflow-hidden bg-[#0c4960]" aria-label="Explore From fish skin to Nordic unicorn">
                     <img src="images/DTS_NORDIC_by Gregory Woodman_009.webp" alt="Circular production in practice" class="absolute inset-0 w-full h-full object-cover">
-                    <span class="absolute top-2 right-3 md:top-4 md:right-5 text-white text-3xl md:text-5xl" aria-hidden="true">↗</span>
+                        <span class="absolute top-0 right-0 flex h-6 w-6 md:h-12 md:w-12 items-center justify-center bg-[#0033FF] text-white" aria-hidden="true">
+                            <svg class="h-5 w-5 md:h-10 md:w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M7 17L17 7M8 7h9v9" />
+                            </svg>
+                        </span>
                 </a>
             </article>
             <article class="case-row grid grid-cols-2">
@@ -127,7 +165,11 @@
                 </div>
                 <a href="index.html#signup" class="relative overflow-hidden bg-[#0c4960]" aria-label="Explore From fish skin to Nordic unicorn">
                     <img src="images/DTS_NORDIC_by Gregory Woodman_008.webp" alt="Circular business founders" class="absolute inset-0 w-full h-full object-cover">
-                    <span class="absolute top-2 right-3 md:top-4 md:right-5 text-white text-3xl md:text-5xl" aria-hidden="true">↗</span>
+                        <span class="absolute top-0 right-0 flex h-6 w-6 md:h-12 md:w-12 items-center justify-center bg-[#0033FF] text-white" aria-hidden="true">
+                            <svg class="h-5 w-5 md:h-10 md:w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M7 17L17 7M8 7h9v9" />
+                            </svg>
+                        </span>
                 </a>
             </article>
             <article class="case-row grid grid-cols-2">
@@ -139,7 +181,11 @@
                 </div>
                 <a href="index.html#signup" class="relative overflow-hidden bg-[#0c4960]" aria-label="Explore From fish skin to Nordic unicorn">
                     <img src="images/DTS_NORDIC_by Gregory Woodman_006.webp" alt="Circular business founder" class="absolute inset-0 w-full h-full object-cover">
-                    <span class="absolute top-2 right-3 md:top-4 md:right-5 text-white text-3xl md:text-5xl" aria-hidden="true">↗</span>
+                        <span class="absolute top-0 right-0 flex h-6 w-6 md:h-12 md:w-12 items-center justify-center bg-[#0033FF] text-white" aria-hidden="true">
+                            <svg class="h-5 w-5 md:h-10 md:w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M7 17L17 7M8 7h9v9" />
+                            </svg>
+                        </span>
                 </a>
             </article>
             <article class="case-row grid grid-cols-2">
@@ -151,7 +197,11 @@
                 </div>
                 <a href="index.html#signup" class="relative overflow-hidden bg-[#0c4960]" aria-label="Explore From fish skin to Nordic unicorn">
                     <img src="images/DTS_NORDIC_by Gregory Woodman_005.webp" alt="Circular business founders" class="absolute inset-0 w-full h-full object-cover">
-                    <span class="absolute top-2 right-3 md:top-4 md:right-5 text-white text-3xl md:text-5xl" aria-hidden="true">↗</span>
+                        <span class="absolute top-0 right-0 flex h-6 w-6 md:h-12 md:w-12 items-center justify-center bg-[#0033FF] text-white" aria-hidden="true">
+                            <svg class="h-5 w-5 md:h-10 md:w-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M7 17L17 7M8 7h9v9" />
+                            </svg>
+                        </span>
                 </a>
             </article>
         </section>
