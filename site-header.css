@@ -1,0 +1,21 @@
+site-header {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .diagonal-pil {
+        position: fixed;
+        left: 24px;
+        top: 48px;
+        z-index: 60;
+    }
+}
+
+@media (max-width: 767px) {
+    .diagonal-pil {
+        position: absolute;
+        left: 16px;
+        top: 16px;
+        z-index: 60;
+    }
+}
