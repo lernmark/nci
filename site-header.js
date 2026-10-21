@@ -17,7 +17,7 @@
                         <img data-site-src="images/frombelieftobankability_logo.png" alt="From Belief to Bankability" class="h-24 w-auto object-contain">
                     </a>
                 </div>
-                <button type="button" data-home-case-menu data-menu-toggle aria-label="Open menu" aria-controls="site-mobile-menu" aria-expanded="false" class="w-12 flex justify-end text-[#0033FF]">
+                <button type="button" data-menu-toggle aria-label="Open menu" aria-controls="site-mobile-menu" aria-expanded="false" class="w-12 flex justify-end text-[#0033FF]">
                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
                         <line x1="4" y1="8" x2="20" y2="8" />
                         <line x1="4" y1="16" x2="16" y2="16" />
@@ -33,17 +33,17 @@
                         </a>
                     </div>
                 </div>
-                <div data-home-case-menu class="flex justify-center items-center">
+                <div class="flex justify-center items-center">
                     <div class="flex space-x-12 text-[12px] font-bold uppercase tracking-[0.2em] text-white">
                         <a data-site-href="index.html#signup" class="hover:opacity-70 transition">Sign up</a>
                         <a data-site-href="index.html#meet-us" class="hover:opacity-70 transition">Meet us</a>
-                        <a data-site-href="cases.html" data-page-link="cases" class="hover:opacity-70 transition">Cases</a>
+                        <a data-site-href="cases.html" data-page-link="cases" data-home-case-link class="hover:opacity-70 transition">Cases</a>
                         <a data-site-href="index.html#about" class="hover:opacity-70 transition">About us</a>
                     </div>
                 </div>
             </div>
 
-            <div id="site-mobile-menu" data-home-case-menu class="fixed inset-0 bg-[#0033FF] z-50 transform translate-x-full md:hidden flex flex-col items-center justify-center space-y-8 text-white text-xl font-bold uppercase tracking-widest transition-transform duration-300">
+            <div id="site-mobile-menu" class="fixed inset-0 bg-[#0033FF] z-50 transform translate-x-full md:hidden flex flex-col items-center justify-center space-y-8 text-white text-xl font-bold uppercase tracking-widest transition-transform duration-300">
                 <button type="button" data-menu-toggle aria-label="Close menu" class="absolute top-8 right-8 text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -51,7 +51,7 @@
                 </button>
                 <a data-site-href="index.html#signup">Sign up</a>
                 <a data-site-href="index.html#meet-us">Meet us</a>
-                <a data-site-href="cases.html" data-page-link="cases">Cases</a>
+                <a data-site-href="cases.html" data-page-link="cases" data-home-case-link>Cases</a>
                 <a data-site-href="index.html#about">About us</a>
             </div>
         </nav>
@@ -69,7 +69,7 @@
             this.innerHTML = headerMarkup;
             if (this.dataset.page === "home") {
                 const showCases = new URLSearchParams(location.search).get("show") === "cases";
-                this.querySelectorAll("[data-home-case-menu]").forEach((element) => {
+                this.querySelectorAll("[data-home-case-link]").forEach((element) => {
                     element.hidden = !showCases;
                     element.style.display = showCases ? "" : "none";
                 });
