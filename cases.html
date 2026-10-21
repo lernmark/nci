@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="sv" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Nordic circular business cases with proven performance.">
+    <title>Cases | Nordic Circular Investments</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Libre+Baskerville:ital,wght@1,400&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .serif-italic {
+            font-family: 'Libre Baskerville', serif;
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .case-row {
+            min-height: 180px;
+        }
+
+        @media (min-width: 768px) {
+            .case-row {
+                min-height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900 overflow-x-hidden">
+    <header class="relative">
+        <nav class="absolute top-0 w-full z-50">
+            <div class="flex md:hidden bg-white/95 h-20 px-6 items-center justify-between">
+                <a href="index.html" aria-label="Nordic Circular Investments home">
+                    <img src="images/frombelieftobankability_logo_cropped.png" alt="From Belief to Bankability"
+                        class="h-12 w-auto object-contain">
+                </a>
+                <button type="button" onclick="toggleMenu()" aria-label="Open menu" aria-controls="mobile-menu"
+                    aria-expanded="false" class="text-[#0033FF]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="3" stroke-linecap="round">
+                        <line x1="4" y1="8" x2="20" y2="8" />
+                        <line x1="4" y1="16" x2="16" y2="16" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="hidden md:flex max-w-7xl mx-auto px-12 h-32 items-center justify-between">
+                <a href="index.html" aria-label="Nordic Circular Investments home">
+                    <img src="images/frombelieftobankability_logo.png" alt="From Belief to Bankability"
+                        class="h-20 w-auto object-contain">
+                </a>
+                <div class="flex gap-10 text-[12px] font-bold uppercase tracking-[0.2em] text-white">
+                    <a href="index.html#signup" class="hover:opacity-70 transition">Sign up</a>
+                    <a href="index.html#meet-us" class="hover:opacity-70 transition">Meet us</a>
+                    <a href="cases.html" aria-current="page" class="hover:opacity-70 transition">Cases</a>
+                    <a href="index.html#about" class="hover:opacity-70 transition">About us</a>
+                </div>
+            </div>
+
+            <div id="mobile-menu"
+                class="fixed inset-0 bg-[#0033FF] z-50 transform translate-x-full md:hidden flex flex-col items-center justify-center space-y-8 text-white text-xl font-bold uppercase tracking-widest transition-transform duration-300">
+                <button type="button" onclick="toggleMenu()" aria-label="Close menu"
+                    class="absolute top-8 right-8 text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+                <a href="index.html#signup" onclick="toggleMenu()">Sign up</a>
+                <a href="index.html#meet-us" onclick="toggleMenu()">Meet us</a>
+                <a href="cases.html" onclick="toggleMenu()" aria-current="page">Cases</a>
+                <a href="index.html#about" onclick="toggleMenu()">About us</a>
+            </div>
+        </nav>
+
+        <section class="relative min-h-[300px] md:min-h-[420px] flex items-center justify-center text-center text-white px-6 pt-24 pb-12">
+            <img src="images/DTS_NORDIC_by Gregory Woodman_004.webp" alt="Nordic landscape"
+                class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/45"></div>
+            <div class="relative z-10">
+                <p class="text-xs uppercase font-bold tracking-[0.25em] mb-4">Nordic Circular Investments</p>
+                <h1 class="text-3xl md:text-5xl font-semibold">Circular business.</h1>
+                <p class="serif-italic text-xl md:text-2xl mt-2">Proven performance.</p>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <div class="bg-black text-white px-6 py-8 md:py-12 text-center">
+            <p class="max-w-3xl mx-auto text-sm md:text-xl font-semibold leading-relaxed">
+                10 companies across the Nordics demonstrating<br class="hidden md:block">
+                how circular business models become bankable.
+            </p>
+        </div>
+
+        <section aria-label="Circular business cases" class="grid grid-cols-1">
+            <article class="case-row grid grid-cols-2">
+                <div class="flex flex-col justify-center bg-white px-4 py-5 md:px-12 md:py-10">
+                    <p class="text-[9px] md:text-xs uppercase tracking-[0.18em] text-[#0033FF] mb-2">Nordic case</p>
+                    <h2 class="text-sm md:text-3xl font-bold leading-snug">From fish skin to Nordic unicorn</h2>
+                    <p class="hidden md:block text-sm text-gray-600 mt-4 max-w-md">A circular business turning overlooked resources into lasting value.</p>
+                    <a href="index.html#signup" class="text-[9px] md:text-xs uppercase tracking-[0.15em] mt-4 md:mt-6 text-gray-700 hover:text-[#0033FF]">Explore case <span aria-hidden="true">→</span></a>
+                </div>
+                <a href="index.html#signup" class="relative overflow-hidden bg-[#0c4960]" aria-label="Explore From fish skin to Nordic unicorn">
+                    <img src="images/DTS_NORDIC_by Gregory Woodman_009.webp" alt="Circular production in practice" class="absolute inset-0 w-full h-full object-cover">
+                    <span class="absolute top-2 right-3 md:top-4 md:right-5 text-white text-3xl md:text-5xl" aria-hidden="true">↗</span>
+                </a>
+            </article>
+            <article class="case-row grid grid-cols-2">
+                <div class="flex flex-col justify-center bg-white px-4 py-5 md:px-12 md:py-10">
+                    <p class="text-[9px] md:text-xs uppercase tracking-[0.18em] text-[#0033FF] mb-2">Nordic case</p>
+                    <h2 class="text-sm md:text-3xl font-bold leading-snug">From fish skin to Nordic unicorn</h2>
+                    <p class="hidden md:block text-sm text-gray-600 mt-4 max-w-md">A circular business turning overlooked resources into lasting value.</p>
+                    <a href="index.html#signup" class="text-[9px] md:text-xs uppercase tracking-[0.15em] mt-4 md:mt-6 text-gray-700 hover:text-[#0033FF]">Explore case <span aria-hidden="true">→</span></a>
+                </div>
+                <a href="index.html#signup" class="relative overflow-hidden bg-[#0c4960]" aria-label="Explore From fish skin to Nordic unicorn">
+                    <img src="images/DTS_NORDIC_by Gregory Woodman_008.webp" alt="Circular business founders" class="absolute inset-0 w-full h-full object-cover">
+                    <span class="absolute top-2 right-3 md:top-4 md:right-5 text-white text-3xl md:text-5xl" aria-hidden="true">↗</span>
+                </a>
+            </article>
+            <article class="case-row grid grid-cols-2">
+                <div class="flex flex-col justify-center bg-white px-4 py-5 md:px-12 md:py-10">
+                    <p class="text-[9px] md:text-xs uppercase tracking-[0.18em] text-[#0033FF] mb-2">Nordic case</p>
+                    <h2 class="text-sm md:text-3xl font-bold leading-snug">From fish skin to Nordic unicorn</h2>
+                    <p class="hidden md:block text-sm text-gray-600 mt-4 max-w-md">A circular business turning overlooked resources into lasting value.</p>
+                    <a href="index.html#signup" class="text-[9px] md:text-xs uppercase tracking-[0.15em] mt-4 md:mt-6 text-gray-700 hover:text-[#0033FF]">Explore case <span aria-hidden="true">→</span></a>
+                </div>
+                <a href="index.html#signup" class="relative overflow-hidden bg-[#0c4960]" aria-label="Explore From fish skin to Nordic unicorn">
+                    <img src="images/DTS_NORDIC_by Gregory Woodman_006.webp" alt="Circular business founder" class="absolute inset-0 w-full h-full object-cover">
+                    <span class="absolute top-2 right-3 md:top-4 md:right-5 text-white text-3xl md:text-5xl" aria-hidden="true">↗</span>
+                </a>
+            </article>
+            <article class="case-row grid grid-cols-2">
+                <div class="flex flex-col justify-center bg-white px-4 py-5 md:px-12 md:py-10">
+                    <p class="text-[9px] md:text-xs uppercase tracking-[0.18em] text-[#0033FF] mb-2">Nordic case</p>
+                    <h2 class="text-sm md:text-3xl font-bold leading-snug">From fish skin to Nordic unicorn</h2>
+                    <p class="hidden md:block text-sm text-gray-600 mt-4 max-w-md">A circular business turning overlooked resources into lasting value.</p>
+                    <a href="index.html#signup" class="text-[9px] md:text-xs uppercase tracking-[0.15em] mt-4 md:mt-6 text-gray-700 hover:text-[#0033FF]">Explore case <span aria-hidden="true">→</span></a>
+                </div>
+                <a href="index.html#signup" class="relative overflow-hidden bg-[#0c4960]" aria-label="Explore From fish skin to Nordic unicorn">
+                    <img src="images/DTS_NORDIC_by Gregory Woodman_005.webp" alt="Circular business founders" class="absolute inset-0 w-full h-full object-cover">
+                    <span class="absolute top-2 right-3 md:top-4 md:right-5 text-white text-3xl md:text-5xl" aria-hidden="true">↗</span>
+                </a>
+            </article>
+        </section>
+    </main>
+
+    <footer class="bg-[#0033FF] text-white py-8 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-6">
+            <a href="index.html" aria-label="Back to home">
+                <img src="images/frombelieftobankability_logo_cropped.png" alt="From Belief to Bankability" class="h-10 w-auto object-contain">
+            </a>
+            <a href="index.html" class="text-xs uppercase font-bold tracking-[0.18em] hover:opacity-70">Back to home</a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const isClosed = menu.classList.toggle('translate-x-full');
+            document.body.classList.toggle('overflow-hidden');
+            document.querySelector('[aria-controls="mobile-menu"]').setAttribute('aria-expanded', String(!isClosed));
+        }
+    </script>
+</body>
+
+</html>
