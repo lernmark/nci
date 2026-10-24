@@ -2,7 +2,8 @@
     const scriptUrl = document.currentScript.src;
     const siteRoot = new URL("", scriptUrl);
     // Paste the full Zoom link here (https://...). The button is hidden until a valid link is set.
-    const zoomUrl = "https://us06web.zoom.us/j/87341214838?pwd=brjpkqubEkjoa2rDmV47nhGND36wPf.1";
+    //const zoomUrl = "https://us06web.zoom.us/j/87341214838?pwd=brjpkqubEkjoa2rDmV47nhGND36wPf.1";
+    const zoomUrl = "";
     const zoomLabel = "Join the reveal event today";
     const zoomIcon = `<svg class="zoom-btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5h7A2.5 2.5 0 0 1 15 7.5v9a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 3 16.5v-9Zm13 3.2 5-3.2v9l-5-3.2v-2.6Z"/></svg>`;
     const headerMarkup = `
