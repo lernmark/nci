@@ -112,6 +112,34 @@
             </div>
         </section>
 
+        <section class="grid grid-cols-1 md:grid-cols-2 min-h-[500px]" id="signup-form">
+            <div class="bg-[#E5E5E5] p-12 md:p-24 flex flex-col justify-center items-start md:items-end text-left md:text-right">
+                <div class="max-w-md">
+                    <h3 class="text-[#0033FF] text-5xl md:text-6xl font-bold mb-4">Sign up</h3>
+                    <p class="text-[#0033FF] text-3xl md:text-4xl serif-italic italic leading-tight">
+                        It’s free - and it’s the only way in.
+                    </p>
+                </div>
+            </div>
+            <div class="bg-[#E5E5E5] p-12 md:p-24 flex flex-col justify-center items-start">
+                <form name="signup" method="POST" netlify data-netlify="true" class="w-full max-w-md space-y-4">
+                    <input type="text" name="name" placeholder="ENTER YOUR NAME" required
+                        class="w-full p-4 bg-white border-none text-xs tracking-widest font-mono focus:ring-2 focus:ring-[#0033FF] outline-none">
+
+                    <input type="text" name="business" placeholder="ENTER YOUR BUSINESS" required
+                        class="w-full p-4 bg-white border-none text-xs tracking-widest font-mono focus:ring-2 focus:ring-[#0033FF] outline-none">
+
+                    <input type="email" name="email" placeholder="EMAIL ADRESS" required
+                        class="w-full p-4 bg-white border-none text-xs tracking-widest font-mono focus:ring-2 focus:ring-[#0033FF] outline-none">
+
+                    <button type="submit"
+                        class="bg-[#0033FF] text-white px-12 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-blue-700 transition">
+                        Submit
+                    </button>
+                </form>
+            </div>
+        </section>
+
         <section class="grid grid-cols-1 bg-[#f2f2f2] md:min-h-[390px] md:grid-cols-2">
             <div class="order-1 flex min-h-[270px] items-center justify-center bg-[#f2f2f2] px-5 py-8 md:order-1 md:min-h-0 md:px-8 md:py-10">
                 <img src="Data/inklistrad-film-77437.webp" alt="Movement circular reuse process: source, refresh, resell and reuse" class="h-full max-h-[390px] w-full max-w-[440px] object-contain">
