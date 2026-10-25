@@ -2,8 +2,8 @@
     const scriptUrl = document.currentScript.src;
     const siteRoot = new URL("", scriptUrl);
     // Paste the full Zoom link here (https://...). The button is hidden until a valid link is set.
-    //const zoomUrl = "https://us06web.zoom.us/j/87341214838?pwd=brjpkqubEkjoa2rDmV47nhGND36wPf.1";
-    const zoomUrl = "";
+    const zoomUrl = "https://us06web.zoom.us/j/87341214838?pwd=brjpkqubEkjoa2rDmV47nhGND36wPf.1";
+    // const zoomUrl = "";
     const zoomLabel = "Join the reveal event today";
     const zoomIcon = `<svg class="zoom-btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5h7A2.5 2.5 0 0 1 15 7.5v9a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 3 16.5v-9Zm13 3.2 5-3.2v9l-5-3.2v-2.6Z"/></svg>`;
     const headerMarkup = `
@@ -22,15 +22,12 @@
                         <img data-site-src="images/frombelieftobankability_logo.png" alt="From Belief to Bankability" class="h-24 w-auto object-contain">
                     </a>
                 </div>
-                <div class="flex items-center gap-3 justify-end">
-                    <a data-zoom-link target="_blank" rel="noopener" aria-label="${zoomLabel}" class="zoom-btn zoom-btn--compact">${zoomIcon}<span>Join</span></a>
-                    <button type="button" data-menu-toggle aria-label="Open menu" aria-controls="site-mobile-menu" aria-expanded="false" class="w-9 flex justify-end text-[#0033FF]">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
-                            <line x1="4" y1="8" x2="20" y2="8" />
-                            <line x1="4" y1="16" x2="16" y2="16" />
-                        </svg>
-                    </button>
-                </div>
+                <button type="button" data-menu-toggle aria-label="Open menu" aria-controls="site-mobile-menu" aria-expanded="false" class="w-12 flex justify-end text-[#0033FF]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+                        <line x1="4" y1="8" x2="20" y2="8" />
+                        <line x1="4" y1="16" x2="16" y2="16" />
+                    </svg>
+                </button>
             </div>
 
             <div class="hidden md:grid max-w-7xl mx-auto px-24 h-40 grid-cols-2 items-center relative">
@@ -47,7 +44,6 @@
                         <a data-site-href="index.html#meet-us" class="hover:opacity-70 transition">Meet us</a>
                         <a data-site-href="cases.html" data-page-link="cases" data-home-case-link class="hover:opacity-70 transition">Cases</a>
                         <a data-site-href="index.html#about" class="hover:opacity-70 transition">About us</a>
-                        <a data-zoom-link target="_blank" rel="noopener" class="zoom-btn">${zoomIcon}<span>${zoomLabel}</span></a>
                     </div>
                 </div>
             </div>
@@ -72,7 +68,9 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10" />
                 </svg>
             </a>
-        </div>`;
+        </div>
+
+        <a data-zoom-link target="_blank" rel="noopener" class="zoom-btn zoom-btn--floating">${zoomIcon}<span>${zoomLabel}</span></a>`;
 
     class SiteHeader extends HTMLElement {
         connectedCallback() {

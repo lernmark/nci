@@ -105,6 +105,35 @@
             </div>
         </section>
 
+        <section class="grid grid-cols-1 md:grid-cols-2" id="signup-form">
+            <div class="bg-[#E5E5E5] px-6 pt-10 pb-2 md:px-16 md:py-14 flex flex-col justify-center items-start md:items-end text-left md:text-right">
+                <div class="max-w-md">
+                    <h3 class="text-[#0033FF] text-3xl md:text-4xl font-bold mb-2">Download the full case</h3>
+                    <p class="text-[#0033FF] text-lg md:text-xl serif-italic italic leading-snug">
+                        Enter your email to receive the full PDF
+                    </p>
+                </div>
+            </div>
+            <div class="bg-[#E5E5E5] px-6 pt-4 pb-10 md:px-16 md:py-14 flex flex-col justify-center items-start">
+                <form name="download-case" method="POST" netlify data-netlify="true" class="w-full max-w-md space-y-3">
+                    <input type="hidden" name="case" value="Cemvision">
+                    <input type="text" name="name" placeholder="ENTER YOUR NAME" required
+                        class="w-full p-4 bg-white border-none text-xs tracking-widest font-mono focus:ring-2 focus:ring-[#0033FF] outline-none">
+
+                    <input type="text" name="business" placeholder="ENTER YOUR BUSINESS" required
+                        class="w-full p-4 bg-white border-none text-xs tracking-widest font-mono focus:ring-2 focus:ring-[#0033FF] outline-none">
+
+                    <input type="email" name="email" placeholder="EMAIL ADDRESS" required
+                        class="w-full p-4 bg-white border-none text-xs tracking-widest font-mono focus:ring-2 focus:ring-[#0033FF] outline-none">
+
+                    <button type="submit"
+                        class="bg-[#0033FF] text-white px-12 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-blue-700 transition">
+                        Send me the PDF
+                    </button>
+                </form>
+            </div>
+        </section>
+
         <section class="grid grid-cols-1 bg-[#f2f2f2] md:min-h-[390px] md:grid-cols-2">
             <div class="order-1 flex min-h-[260px] items-center justify-center bg-[#f2f2f2] px-6 py-8 md:order-1 md:min-h-0 md:px-10 md:py-12">
                 <img src="Data/inklistrad-film-76877.webp" alt="Cemvision circular cement process diagram" class="h-full max-h-[340px] w-full max-w-[520px] object-contain">
@@ -165,11 +194,7 @@
                     and prove the unit economics.”
                 </blockquote>
                 <figcaption class="mt-6 text-[9px] font-semibold uppercase tracking-[0.18em] text-white/80">
-                    Johan Wiksell<br />Investor, JM Ventures</figcaption>
-                <a href="NCI%20WEB_CEMVISION.pdf" download class="mt-8 inline-flex items-center gap-3 rounded-full bg-white px-8 py-3 text-xs font-bold uppercase tracking-widest text-[#0033FF] transition hover:bg-white/80">
-                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0l-5-5m5 5l5-5M5 20h14"/></svg>
-                    Download case as PDF · 3.6 MB
-                </a>
+                    Johan Wiksell<br />Investor, JM Ventures                    </figcaption>
             </figure>
         </section>
     </main>
@@ -182,6 +207,7 @@
             <a href="../../cases.html" class="text-xs uppercase font-bold tracking-[0.18em] hover:opacity-70">Back to cases</a>
         </div>
     </footer>
+    <script src="../download-form.js"></script>
 </body>
 
 </html>

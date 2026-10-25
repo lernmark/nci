@@ -31,10 +31,21 @@ site-header {
     height: 1.25em;
 }
 
-.zoom-btn--compact {
-    padding: 0.4rem 0.75rem;
-    font-size: 12px;
+.zoom-btn--floating {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 40;
+    font-size: 13px;
     letter-spacing: 0.02em;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 767px) {
+    .zoom-btn--floating {
+        left: 16px;
+        justify-content: center;
+    }
 }
 
 .zoom-btn--large {

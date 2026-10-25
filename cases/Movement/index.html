@@ -112,29 +112,30 @@
             </div>
         </section>
 
-        <section class="grid grid-cols-1 md:grid-cols-2 min-h-[500px]" id="signup-form">
-            <div class="bg-[#E5E5E5] p-12 md:p-24 flex flex-col justify-center items-start md:items-end text-left md:text-right">
+        <section class="grid grid-cols-1 md:grid-cols-2" id="signup-form">
+            <div class="bg-[#E5E5E5] px-6 pt-10 pb-2 md:px-16 md:py-14 flex flex-col justify-center items-start md:items-end text-left md:text-right">
                 <div class="max-w-md">
-                    <h3 class="text-[#0033FF] text-5xl md:text-6xl font-bold mb-4">Sign up</h3>
-                    <p class="text-[#0033FF] text-3xl md:text-4xl serif-italic italic leading-tight">
-                        It’s free - and it’s the only way in.
+                    <h3 class="text-[#0033FF] text-3xl md:text-4xl font-bold mb-2">Download the full case</h3>
+                    <p class="text-[#0033FF] text-lg md:text-xl serif-italic italic leading-snug">
+                        Enter your email to receive the full PDF
                     </p>
                 </div>
             </div>
-            <div class="bg-[#E5E5E5] p-12 md:p-24 flex flex-col justify-center items-start">
-                <form name="signup" method="POST" netlify data-netlify="true" class="w-full max-w-md space-y-4">
+            <div class="bg-[#E5E5E5] px-6 pt-4 pb-10 md:px-16 md:py-14 flex flex-col justify-center items-start">
+                <form name="download-case" method="POST" netlify data-netlify="true" class="w-full max-w-md space-y-3">
+                    <input type="hidden" name="case" value="Movement">
                     <input type="text" name="name" placeholder="ENTER YOUR NAME" required
                         class="w-full p-4 bg-white border-none text-xs tracking-widest font-mono focus:ring-2 focus:ring-[#0033FF] outline-none">
 
                     <input type="text" name="business" placeholder="ENTER YOUR BUSINESS" required
                         class="w-full p-4 bg-white border-none text-xs tracking-widest font-mono focus:ring-2 focus:ring-[#0033FF] outline-none">
 
-                    <input type="email" name="email" placeholder="EMAIL ADRESS" required
+                    <input type="email" name="email" placeholder="EMAIL ADDRESS" required
                         class="w-full p-4 bg-white border-none text-xs tracking-widest font-mono focus:ring-2 focus:ring-[#0033FF] outline-none">
 
                     <button type="submit"
                         class="bg-[#0033FF] text-white px-12 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-blue-700 transition">
-                        Submit
+                        Send me the PDF
                     </button>
                 </form>
             </div>
@@ -191,23 +192,20 @@
                     “Movement combines a proven, profitable model with strong structural tailwinds. The team has built, and is a good example of circularity being a strong business case, not just an ambition.”
                 </blockquote>
                 <figcaption class="mt-6 text-[9px] font-semibold uppercase tracking-[0.18em] text-white/80">
-                    Magnus Baumann<br/>Managing Partner and CIO, Ignite Capita</figcaption>
-                <a href="NCI%20WEB_movement.pdf" download class="mt-8 inline-flex items-center gap-3 rounded-full bg-white px-8 py-3 text-xs font-bold uppercase tracking-widest text-[#0033FF] transition hover:bg-white/80">
-                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0l-5-5m5 5l5-5M5 20h14"/></svg>
-                    Download case as PDF · 2.3 MB
-                </a>
+                    Magnus Baumann<br/>Managing Partner and CIO, Ignite Capita                    </figcaption>
             </figure>
         </section>
     </main>
 
     <footer class="bg-[#0033FF] text-white py-8 px-6 md:px-12">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-6">
+            <a href="../../cases.html" class="text-xs uppercase font-bold tracking-[0.18em] hover:opacity-70">Back to cases</a>
             <a href="index.html" aria-label="Back to home">
                 <img src="../../images/frombelieftobankability_logo_cropped.png" alt="From Belief to Bankability" class="h-10 w-auto object-contain">
             </a>
-            <a href="../../cases.html" class="text-xs uppercase font-bold tracking-[0.18em] hover:opacity-70">Back to cases</a>
         </div>
     </footer>
+    <script src="../download-form.js"></script>
 </body>
 
 </html>
