@@ -17,3 +17,15 @@ Place the component where the header should appear:
 ```
 
 For a page inside a subfolder, use `../site-header.css` and `../site-header.js`. The component resolves shared navigation links and logos from the script's location, including on nested pages. The header works both from a local `file://` page and when served through HTTP.
+
+## Styles and fonts
+
+The site does not load anything from third parties. Fonts (Inter, Libre Baskerville) are served from `fonts/`, and Tailwind CSS is compiled to `tailwind.css`.
+
+After adding or changing Tailwind classes in any HTML or JS file, rebuild with the [Tailwind CSS v3 standalone CLI](https://github.com/tailwindlabs/tailwindcss/releases/tag/v3.4.17):
+
+```
+tailwindcss -c tailwind.config.js -i tailwind-input.css -o tailwind.css --minify
+```
+
+Commit the regenerated `tailwind.css`. The privacy policy is `privacy.html`.
