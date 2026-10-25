@@ -36,6 +36,8 @@ site-header {
     right: 16px;
     bottom: 16px;
     z-index: 40;
+    max-width: calc(100vw - 2rem);
+    white-space: normal;
     font-size: 13px;
     letter-spacing: 0.02em;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
@@ -49,6 +51,10 @@ site-header {
 }
 
 .zoom-btn--large {
+    max-width: calc(100vw - 3rem);
+    white-space: normal;
+    text-align: center;
+    justify-content: center;
     font-size: 1rem;
     padding: 0.8rem 1.6rem;
     letter-spacing: 0.04em;
