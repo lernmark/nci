@@ -1,15 +1,15 @@
 (() => {
     const pdfs = {
-        "3STEPIT": "NCI Case_3STEPIT_REV20261022.pdf",
-        Cemvision: "NCI Case_Cemvision_rev20261022.pdf",
-        Foxway: "NCI Case_foxway_rev20261022.pdf",
-        Kerecis: "NCI Case_Kerecis_rev20261022.pdf",
-        Movement: "NCI Case_Movement_rev20261022.pdf",
-        NSC: "NCI Case_NordicSaltCycle_rev20261022.pdf",
-        OBO: "NCI Case_OBO_REV20261022.pdf",
-        Papershell: "NCI Case_Papershell_rev20261022.pdf",
-        Tise: "NCI Case_Tise_rev20261022.pdf",
-        TOMRA: "NCI Case_tomra_REV20261022.pdf"
+        "3STEPIT": "NCI_Case_3STEPIT_20261026.pdf",
+        Cemvision: "NCI_Case_Cemvision_20261026.pdf",
+        Foxway: "NCI_Case_Foxway_20261026.pdf",
+        Kerecis: "NCI_Case_Kerecis_20261026.pdf",
+        Movement: "NCI_Case_Movement_20261026.pdf",
+        NSC: "NCI_Case_NordicSaltCycle_20261026.pdf",
+        OBO: "NCI_Case_OBO_20261026.pdf",
+        Papershell: "NCI_Case_Papershell_20261026.pdf",
+        Tise: "NCI_Case_Tise_20261026.pdf",
+        TOMRA: "NCI_Case_TOMRA_20261026.pdf"
     };
 
     const form = document.querySelector('form[name="download-case"]');
