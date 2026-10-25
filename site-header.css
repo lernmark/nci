@@ -32,6 +32,16 @@ site-header {
 }
 
 .zoom-btn--floating {
+    transition: opacity 0.25s, transform 0.25s, background 0.2s;
+}
+
+.zoom-btn--floating.zoom-btn--away {
+    opacity: 0;
+    transform: translateY(12px);
+    pointer-events: none;
+}
+
+.zoom-btn--floating {
     position: fixed;
     right: 16px;
     bottom: 16px;

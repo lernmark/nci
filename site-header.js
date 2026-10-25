@@ -103,6 +103,16 @@
                     link.hidden = true;
                 }
             });
+            const floating = this.querySelector(".zoom-btn--floating");
+            if (floating && zoomValid) {
+                const update = () => {
+                    const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 120;
+                    floating.classList.toggle("zoom-btn--away", atBottom);
+                };
+                window.addEventListener("scroll", update, { passive: true });
+                window.addEventListener("resize", update);
+                update();
+            }
             this.querySelectorAll("[data-site-src]").forEach((image) => {
                 image.src = new URL(image.dataset.siteSrc, siteRoot).href;
             });
