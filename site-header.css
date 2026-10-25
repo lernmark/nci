@@ -71,3 +71,14 @@ site-header {
         z-index: 60;
     }
 }
+html, body {
+    overflow-x: clip;
+    max-width: 100%;
+}
+#site-mobile-menu.translate-x-full {
+    visibility: hidden;
+}
+#site-mobile-menu {
+    transition: transform 0.3s, visibility 0s;
+}
+
