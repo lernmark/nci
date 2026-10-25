@@ -5,6 +5,9 @@
     const zoomUrl = "https://us06web.zoom.us/j/87341214838?pwd=brjpkqubEkjoa2rDmV47nhGND36wPf.1";
     // const zoomUrl = "";
     const zoomLabel = "Join the reveal event today";
+    // Cases and the Zoom link are public from this moment (Swedish time); before it, only with ?show=cases.
+    const publicFrom = new Date("2026-10-26T00:00:00+01:00");
+    const isPublic = () => Date.now() >= publicFrom.getTime() || new URLSearchParams(location.search).get("cases") === "show";
     const zoomIcon = `<svg class="zoom-btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5h7A2.5 2.5 0 0 1 15 7.5v9a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 3 16.5v-9Zm13 3.2 5-3.2v9l-5-3.2v-2.6Z"/></svg>`;
     const headerMarkup = `
         <nav class="absolute top-0 w-full z-50">
@@ -76,7 +79,7 @@
         connectedCallback() {
             this.innerHTML = headerMarkup;
             if (this.dataset.page === "home") {
-                const showCases = new URLSearchParams(location.search).get("show") === "cases";
+                const showCases = isPublic();
                 this.querySelectorAll("[data-home-case-link]").forEach((element) => {
                     element.hidden = !showCases;
                     element.style.display = showCases ? "" : "none";
@@ -92,7 +95,7 @@
             this.querySelectorAll("[data-site-href]").forEach((link) => {
                 link.href = new URL(link.dataset.siteHref, siteRoot).href;
             });
-            const zoomValid = /^https:\/\//i.test(zoomUrl);
+            const zoomValid = /^https:\/\//i.test(zoomUrl) && isPublic();
             this.querySelectorAll("[data-zoom-link]").forEach((link) => {
                 if (zoomValid) {
                     link.href = zoomUrl;
