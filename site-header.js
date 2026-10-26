@@ -4,7 +4,7 @@
     // Paste the full Zoom link here (https://...). The button is hidden until a valid link is set.
     const zoomUrl = "https://us06web.zoom.us/j/87341214838?pwd=brjpkqubEkjoa2rDmV47nhGND36wPf.1";
     // const zoomUrl = "";
-    const zoomLabel = "Join the reveal event today";
+    const zoomLabel = "Join the reveal event today 14:00 CET";
     // Event schedule uses Swedish time (UTC+01:00); cases=show bypasses both time windows.
     const showCasesOverride = new URLSearchParams(location.search).get("cases") === "show";
     const zoomFrom = new Date("2026-10-26T00:00:00+01:00").getTime();
